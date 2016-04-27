@@ -11,8 +11,9 @@ before do
   @page = OpenStruct.new(
     url: request.url,
     og: OpenStruct.new(
-      image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/0/0e4226eef7e5800a9c0b63ccb3ec41d5a5f5b2c0.png',
-      secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/0/0e4226eef7e5800a9c0b63ccb3ec41d5a5f5b2c0.png'
+      image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
+      secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
+      description: 'Chceme, aby boli digitálne služby štátu boli jednoduché a dávali zmysel.'
     )
   )
 end
@@ -59,9 +60,9 @@ end
 get '/podpora/?' do
   @page.title = 'Zapojte sa'
   @page.og.title = 'Aj ja podporujem boj za lepšie digitálne služby štátu!'
-  @page.og.image = 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/7/72285cc13f501538bc29afe57000e2f9ac2f210f.jpg'
-  @page.og.secure_url = 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/7/72285cc13f501538bc29afe57000e2f9ac2f210f.jpg'
-
+  @page.og.image = 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/optimized/2X/5/5cafd95c02f8bdab6f801af93c0856e98647ff63_1_690x362.png'
+  @page.og.secure_url = 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/optimized/2X/5/5cafd95c02f8bdab6f801af93c0856e98647ff63_1_690x362.png'
+  @page.og.description = 'Robíme všetko preto, aby bolo štátne IT lepšie.'
   erb :contribute
 end
 
@@ -96,4 +97,13 @@ end
 
 get '/vyzva/style.css' do
   scss :'vyzva/style'
+end
+
+not_found do
+  erb :'404'
+end
+
+# legacy
+get '/oz/novinky/?' do
+  redirect to('/aktuality')
 end
