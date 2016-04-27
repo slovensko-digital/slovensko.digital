@@ -1,0 +1,7 @@
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Slovensko.Digital"/>
+<meta property="og:url" content="<%= @page.url %>" />
+<meta property="og:title" content="<% if @page.og.title %><%= @page.og.title %><% else %><%= @page.title %><% end %>" />
+<% if @page.og.description %><meta property="og:description" content="<%= @page.og.description %>" /><% end %>
+<% if @page.og.image %><meta property="og:image" content="<%= @page.og.image %>" /><% end %>
+<% if @page.og.secure_url %><meta property="og:image:secure_url" content="<%= @page.og.secure_url %>" /><% end %>

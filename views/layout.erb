@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><% if @page.title %><%= @page.title %> | <% end %>Slovensko.Digital</title>
+  <meta name="description" content="Informatizácia na Slovensku má veľký problém.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= erb :meta %>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900,300&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body class="<%= @body_class || 'single' %>">
+<!--[if lt IE 8]>
+<p class="browserupgrade">Používate <strong>zastaralý</strong> prehliadač. Prosím <a href="http://browsehappy.com/">aktualizujte si Váš prehliadač</a> pre lepší zážitok z tejto stránky.</p>
+<![endif]-->
+<nav class="navbar navbar-fixed-top navbar-transparent" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/img/logo/slovenskodigital-logo.svg" alt="Slovensko digital"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="/o-nas" class="dropdown-toggle disabled" data-toggle="dropdown">O nás <b class="caret"></b></a>
+          <ul class="dropdown-menu multi-level">
+            <li><a href="/o-nas">Tím</a></li>
+            <li><a href="/podporovatelia">Podporovatelia</a></li>
+            <li><a href="/stanovy">Stanovy</a></li>
+            <li><a href="/eticky-kodex">Etický kódex</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="/aktuality" class="dropdown-toggle disabled" data-toggle="dropdown">Aktuality <b class="caret"></b></a>
+          <ul class="dropdown-menu multi-level">
+            <li><a href="/aktuality">Novinky</a></li>
+            <li><a href="/temy">Na čom pracujeme?</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="/pre-media" class=" dropdown-toggle disabled" data-toggle="dropdown">Pre médiá <b class="caret"></b></a>
+          <ul class="dropdown-menu multi-level">
+            <li><a href="/pre-media">Tlačové správy</a></li>
+          </ul>
+        </li>
+        <li><a href="/kontakt">Kontakt</a></li>
+        <li><a href="/podpora" class="btn btn-primary">Zapojte sa ></a></li>
+      </ul>
+    </div>
+    <!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<%= yield %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="support-us-left bg-green">
+        <h3><a href="/podpora" class="support-us-link" alt="Podporte nás"><span class="icon-circle" ><img src="img/social/icon-support.svg" title="Podporte nás"></span>Podporte nás</a></h3>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="support-us-right bg-blue">
+        <form id="newsletter-form" role="form" action="https://my.sendinblue.com/users/subscribe/js_id/29wti/id/1" data-action="https://my.sendinblue.com/users/subscribeembed/js_id/29wti/id/1" method="post">
+          <label class="form-headline" for="subscribe-email">Novinky mailom (raz mesačne, žiadny spam)</label>
+          <div class="input-group">
+            <input type="hidden" name="js_id" id="js_id" value="29wti">
+            <input type="hidden" name="listid" id="listid" value="2|5">
+            <input type="hidden" name="from_url" id="from_url" value="yes">
+            <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
+            <input type="email" required name="email" placeholder="janko.mrkvička@slovensko.digital" class="subscribe-email form-control" id="subscribe-email">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary">Prihlásiť</button>
+            </span>
+          </div>
+        </form>
+        <div id="newsletter-success" class="hidden">
+          <h3>Ďakujeme za Váš záujem.</h3>
+          <p>Na zadanú adresu Vám čoskoro príde potvrdzovací email k odberu noviniek.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="footer-main-menu list-unstyled">
+            <li><a href="/podporovatelia">Podporovatelia</a></li>
+            <li><a href="/eticky-kodex">Etický kódex</a></li>
+            <li><a href="/o-nas">Tím</a></li>
+          </ul>
+
+        </div>
+        <div class="col-md-5">
+          <%= erb :address %>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-inline list-unstyled pull-right">
+            <li>
+              <a href="https://www.facebook.com/slovensko.digital/" target="_blank" class="icon-circle" alt="slovensko.digital Facebook"><img src="img/social/icon-facebook.svg" title="slovensko.digital Facebook"></a>
+            </li>
+            <li>
+              <a href="https://github.com/slovensko-digital" target="_blank" class="icon-circle" alt="slovensko.digital Github"><img src="img/social/icon-github.svg" title="slovensko.digital Github"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCbpnKa1XOIpQLYUQ2dz7Sng" target="_blank" class="icon-circle" alt="slovensko.digital Youtube"><img src="img/social/icon-youtube.svg" title="slovensko.digital Youtube"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="footer-sec-menu list-unstyled">
+            <li><a href="/pre-media">Pre médiá</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <ul class="footer-contact list-unstyled">
+            <li class="footer-contact-email"><a href="mailto:kontakt@slovensko.digital">kontakt@slovensko.digital</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <a href="http://www.studioecht.com" class="pull-right studio-echt" target="_blank" alt="Studio Echt">Web vytvoril<img src="img/social/icon-echt.svg" class="icon-echt" title="slovensko.digital Youtube"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+<script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')
+</script>
+
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/vendor/jquery.jsticky.min.js"></script>
+<script src="/js/vendor/svgeezy.min.js"></script>
+
+<script src="/js/main.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69285708-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+
+</html>

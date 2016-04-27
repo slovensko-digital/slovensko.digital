@@ -1,0 +1,153 @@
+<div class="hero"></div>
+<!--/.hero -->
+
+<div class="section main-content">
+  <div class="container">
+    <div class="row">
+      <div class="sidebar col-md-3">
+        <ul class="sidebar-menu list-unstyled">
+          <li class="sidebar-menu-item-active">Podporte finančne</li>
+          <li><a href="/venujte-svoj-cas">Venujte svoj čas</a></li>
+        </ul>
+      </div>
+      <div class="content-box col-md-9">
+        <h1 class="content-heading text-center">Podporte finančne</h1>
+        <p class="lead">Robíme všetko preto, aby bolo štátne IT lepšie. Ak nás chcete na tejto ceste podporiť, najľahšie je to finančným darom alebo
+          <a href="/venujte-svoj-cas">svojim časom</a>.</p>
+        <p><strong>Slovensko.Digital je nezávislé občianske združenie</strong>, ktoré je <strong>financované výhradne z&nbsp;transparetných zdrojov</strong> a od ľudí, ktorí sa otvorene prihlásia k našemu
+          <a href="/eticky-kodex">etickému kódexu</a>. Nemáme čo skrývať a preto výšku a využitie darov budeme transparentne zverejňovať.</p>
+
+        <p>Ak je to možné, staňte sa prosím <strong>pravidelným darcom</strong>. Pomôžete nám tak robiť túto prácu dlhodobo a bez obáv o financie. <strong>Ďakujeme.</strong></p>
+
+        <form id="contribute-form" action="https://www.darujme.sk/sk/widget/1126/" method="post">
+          <input type="hidden" name="id_widget" value="1126">
+          <input type="hidden" name="price" id="contribute-form-price" value="">
+          <label class="form-headline">Chcete prispievať pravidelne?</label>
+          <div class="form-inline">
+            <div class="form-group inline form-group-box">
+              <input type="radio" id="contribute-regularly" name="periodicity" value="periodical" checked>
+              <label for="contribute-regularly">Stať sa pravidelným darcom</label>
+            </div>
+
+            <div class="form-group inline form-group-box">
+              <input type="radio" id="contribute-once" name="periodicity" value="onetime">
+              <label for="contribute-once">Prispieť jednorázovým darom</label>
+            </div>
+          </div>
+
+          <label class="form-headline">Vyberte si sumu, akou nás chcete podporiť</label>
+          <div class="form-inline">
+            <div class="form-group inline form-group-box">
+              <input type="radio" id="contribute-amount-8" name="amount" value="8">
+              <label for="contribute-amount-8">8€</label>
+            </div>
+            <div class="form-group inline form-group-box">
+              <input type="radio" id="contribute-amount-16" name="amount" value="16" checked>
+              <label for="contribute-amount-16">16€</label>
+            </div>
+            <div class="form-group inline form-group-box">
+              <input type="radio" id="contribute-amount-32" name="amount" value="32">
+              <label for="contribute-amount-32">32€</label>
+            </div>
+            <div class="form-group inline form-group-box">
+              <input type="radio" id="contribute-amount-other" name="amount" value="other">
+              <label for="contribute-amount-other">Iná suma
+              <input type="text" id="contribute-price-other" class="form-control" pattern="\d+\.?\d*" name="price_other"> &euro;</label>
+            </div>
+          </div>
+
+          <label class="form-headline">Vyberte spôsob platby</label>
+          <div class="payment">
+            <div class="form-group payment-periodical">
+              <input type="radio" id="payment-method-9" name="payment-method" value="9" checked>
+              <label for="payment-method-9">Platba kartou</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-8" name="payment-method" value="8">
+              <label for="payment-method-8">Platba kartou</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-1" name="payment-method" value="1">
+              <label for="payment-method-1">Tatra banka (TatraPay)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-2" name="payment-method" value="2">
+              <label for="payment-method-2">Slovenská sporitelňa (SporoPay)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-3" name="payment-method" value="3">
+              <label for="payment-method-3">VÚB banka (VUBpay)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-4" name="payment-method" value="4">
+              <label for="payment-method-4">UniCredit (UniPlatba)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-5" name="payment-method" value="5">
+              <label for="payment-method-5">Poštová banka (PoBaPay)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-6" name="payment-method" value="6">
+              <label for="payment-method-6">Sberbank (WEBpay)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-7" name="payment-method" value="7">
+              <label for="payment-method-7">OTP banka (OTPpay)</label>
+            </div>
+            <div class="form-group payment-onetime">
+              <input type="radio" id="payment-method-11" name="payment-method" value="11">
+              <label for="payment-method-11">ČSOB (ČSOB Pay)</label>
+            </div>
+            <div class="form-group">
+              <input type="radio" id="payment-transfer" name="payment-method" value="10" required>
+              <label for="payment-transfer">Prevod alebo vklad na účet</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <label class="form-headline">Meno</label>
+              <input type="text" class="form-control" name="name" placeholder="Meno" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-headline">Priezvisko</label>
+              <input type="text" class="form-control" name="surname" placeholder="Priezvisko" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-headline">Email</label>
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
+            </div>
+
+          </div>
+
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" required><strong>Súhlasím s nasledovnými podmienkami poskytnutia daru.</strong>
+              <div class="rules">
+                <p>
+                  Poskytnutím daru prejavujem <strong>záujem podporovať aktivity združenia Slovensko.Digital,
+                  napĺňať <a href="/stanovy" target="_blank">ciele združenia podľa článku 2</a></strong> a
+                  prejavujem záujem o <strong>zaradenie na zoznam podporovateľov združenia</strong>. Beriem na vedomie, že
+                  <strong>podporovateľom sa stávam až na základe rozhodnutia Rady združenia</strong> o zaradení na
+                  zoznam podporovateľov združenia. V prípade zamietnutia sa peňažný dar vracia.</p>
+                <p><strong>Súhlasím so zverejnením údajov (meno, priezvisko, výška daru)</strong> v zozname podporovateľov združenia.</p>
+                <p>Prehlasujem, že <strong>súhlasím s <a href="/eticky-kodex" target="_blank">Etickým kódexom združenia</a></strong>.</p>
+                <p>Súhlasím s
+                  <strong><a href="https://www.darujme.sk/sk/pravidla/" target="_blank">pravidlami používania
+                    Darujme.sk</a></strong>.</p>
+              </div>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Darovať</button>
+        </form>
+
+        <p class="help-block">V prípade, že by ste radi prispeli ako právnická osoba alebo ak by ste nás radi podporili sumou vyššou ako 500 EUR, <a href="/kontakt">kontaktujte nás</a> prosím za účelom spísania samostatnej darovacej zmluvy.</p>
+
+        <div class="minifooter">
+            <p><img src="/img/logo-ludia-ludom.png" alt="" width="70"> Zabezpečená platba je realizovaná systémom darujme.ĽudiaĽuďom.sk</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
