@@ -97,12 +97,12 @@ ol.big li p {
 
 .news {
     padding: 0;
-    margin: 0;
+    margin: 4em 0;
     list-style: none;
 }
 
 .news li {
-    margin: 1em 0;
+    margin: 2em 0;
 }
 
 .date {
@@ -473,7 +473,7 @@ span.icon-circle {
 .content-box .content-wrap .perex {
     margin: 2em 0;
 }
-.content-box .content-wrap hr {
+.content-box  hr {
     margin-top: 40px;
     margin-bottom: 40px;
 }
