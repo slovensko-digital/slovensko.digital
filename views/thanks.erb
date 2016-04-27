@@ -10,23 +10,23 @@
             <h3>Ďakujeme, že ste súčasťou komunity Slovensko.Digital.</h3>
             <span data-track-event-category="Donation"
                   data-track-event-action="ok"
-                  data-track-event-label="<%== @params['donationtype'] %>"
-                  data-track-event-value="<%== @params['price'] %>"
+                  data-track-event-label="<%= h @params['donationtype'] %>"
+                  data-track-event-value="<%= h @params['price'] %>"
             ></span>
         <% else %>
             <% if @params.key?('chyba') %>
                 <h3>Zdá sa, že platbu sa nepodarilo zrealizovať. Nevadí.</h3>
                 <span data-track-event-category="Donation"
                       data-track-event-action="error"
-                      data-track-event-label="<%== @params['donationtype'] %>"
-                      data-track-event-value="<%== @params['price'] %>"
+                      data-track-event-label="<%= h @params['donationtype'] %>"
+                      data-track-event-value="<%= h @params['price'] %>"
                 ></span>
             <% else %>
                 <h3>Ďakujeme, že chcete byť súčasťou komunity Slovensko.Digital.</h3>
                 <span data-track-event-category="Donation"
                       data-track-event-action="manual"
-                      data-track-event-label="<%== @params['donationtype'] %>"
-                      data-track-event-value="<%== @params['price'] %>"
+                      data-track-event-label="<%= h @params['donationtype'] %>"
+                      data-track-event-value="<%= h @params['price'] %>"
                 ></span>
             <% end %>
             <% if @params['donationtype'] == 'onetime' %>
@@ -35,8 +35,8 @@
                 <p>Pre nastavenie pravidelného (každomesačného) trvalého príkazu použite prosím nasledovné údaje:</p>
             <% end %>
             <p>
-              <strong>Variabilný symbol: <%== @params['vs'] %><br>
-                Suma: <%== @params['price'] %> &euro;<br>
+              <strong>Variabilný symbol: <%= h @params['vs'] %><br>
+                Suma: <%= h @params['price'] %> &euro;<br>
                 Číslo účtu (IBAN): SK05 1100 0000 0029 2383 8046<br>
                 Swift kód: TATRSKBX<br>
                 Správa pre príjimateľa: Slovensko.Digital<br>
