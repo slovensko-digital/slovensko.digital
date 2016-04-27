@@ -18,6 +18,12 @@ before do
   )
 end
 
+helpers do
+  def h(text)
+    Rack::Utils.escape_html(text)
+  end
+end
+
 get '/' do
   erb :index
 end
