@@ -95,14 +95,22 @@ ol.big li p {
     margin: 2em 0 1em 0;
 }
 
+.news-section .news {
+    margin: 4em 0;
+}
+
+.news-section .news li {
+    margin: 2em 0;
+}
+
 .news {
     padding: 0;
-    margin: 4em 0;
+    margin: 2em 0;
     list-style: none;
 }
 
 .news li {
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .date {
