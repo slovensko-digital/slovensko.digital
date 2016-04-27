@@ -11,7 +11,7 @@
             <span data-track-event-category="Donation"
                   data-track-event-action="ok"
                   data-track-event-label="<%= h @params['donationtype'] %>"
-                  data-track-event-value="<%= h @params['price'] %>"
+                  data-track-event-value="<%= h @params['price'].to_i %>"
             ></span>
         <% else %>
             <% if @params.key?('chyba') %>
@@ -19,14 +19,14 @@
                 <span data-track-event-category="Donation"
                       data-track-event-action="error"
                       data-track-event-label="<%= h @params['donationtype'] %>"
-                      data-track-event-value="<%= h @params['price'] %>"
+                      data-track-event-value="<%= h @params['price'].to_i %>"
                 ></span>
             <% else %>
                 <h3>Ďakujeme, že chcete byť súčasťou komunity Slovensko.Digital.</h3>
                 <span data-track-event-category="Donation"
                       data-track-event-action="manual"
                       data-track-event-label="<%= h @params['donationtype'] %>"
-                      data-track-event-value="<%= h @params['price'] %>"
+                      data-track-event-value="<%= h @params['price'].to_i %>"
                 ></span>
             <% end %>
             <% if @params['donationtype'] == 'onetime' %>
