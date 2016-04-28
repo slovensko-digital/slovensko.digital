@@ -116,4 +116,22 @@ $(document).ready(function () {
 
     svgeezy.init(false, 'png');
 
+
+    /**
+     * TabCollapsible
+     */
+
+    $('#audience-nav-tabs').tabCollapse();
+
+    function toggleChevron(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find("i.glyphicon")
+            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+    }
+
+    //change orientation of chevron
+    $('#audience-nav-tabs-accordion').on('hidden.bs.collapse', toggleChevron);
+    $('#audience-nav-tabs-accordion').on('shown.bs.collapse', toggleChevron);
+
 });

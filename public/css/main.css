@@ -796,6 +796,47 @@ footer a {
 }
 
 
+/* Collapsible tabs */
+
+.panel-body {
+    padding: 40px 15px;
+}
+.panel-title{
+    font-size: 0.8em;
+}
+.panel-group {
+    margin-bottom: -1px;
+}
+.panel-group .panel-title .glyphicon{
+    font-size: 0.75em;
+    padding-left: 5px;
+}
+.panel-group .panel+.panel {
+    margin-top: 0;
+}
+
+.panel-default>.panel-heading{
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    padding: 30px;
+}
+
+.nav-tabs .glyphicon{
+    /* hide chevron on desktop */
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .panel-group .panel-title .glyphicon{
+        /* show chevron on mobile */
+        display: inline-block;
+    }
+}
+
+
 /* ==========================================================================
    Override default bootstrap behavior
    ========================================================================== */
