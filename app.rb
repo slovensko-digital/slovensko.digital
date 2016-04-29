@@ -1,10 +1,7 @@
 require 'sinatra'
 require 'sinatra/multi_route'
 require 'sinatra/reloader' if development?
-
-# use Rack::Auth::Basic, 'Protected Area' do |username, password|
-#   username == 'foo' && password == 'bar'
-# end
+require 'newrelic_rpm'
 
 before do
   # TODO sane defaults
