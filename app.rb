@@ -70,6 +70,7 @@ get '/podpora/?' do
 end
 
 route :get, :post, '/dakujeme/?' do
+  redirect to('/podpora') unless params['price']
   @page.title = 'Ďakujeme'
   @params = params
   erb :thanks

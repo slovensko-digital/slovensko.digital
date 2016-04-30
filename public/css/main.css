@@ -129,8 +129,21 @@ ol.big li p {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navbar .navbar-last {
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+@media (min-width: 778px) {
+    .navbar .navbar-last {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (max-width: 779px) {
+    .navbar .navbar-last {
+        margin-top: 10px;
+    }
+}
+
+.navbar li img {
+    height: 1.5em;
+    margin: -0.25em 0;
 }
 
 .navbar-brand, .navbar-nav>li>a {
@@ -856,6 +869,7 @@ footer a {
 .btn {
     font-size: 1.125em;
 }
+
 @media (min-width: 1200px) {
     .container {
         width: 1030px;
@@ -870,4 +884,42 @@ footer a {
 input[type=radio], input[type=checkbox], label {
     cursor: pointer;
     cursor: hand;
+}
+
+/* custom breakpoint */
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
 }
