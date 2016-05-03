@@ -134,4 +134,17 @@ $(document).ready(function () {
     $('#audience-nav-tabs-accordion').on('hidden.bs.collapse', toggleChevron);
     $('#audience-nav-tabs-accordion').on('shown.bs.collapse', toggleChevron);
 
+    /**
+     * Scroll to active accordion tab on mobile
+     */
+
+    $('#main-nav-tabs-accordion').on('shown.bs.collapse', function (e) {
+        var offset = $(this).find('.collapse.in').prev('.panel-heading');
+        if(offset) {
+            $('html,body').animate({
+                scrollTop: $(offset).offset().top -60
+            }, 500);
+        }
+    });
+
 });
