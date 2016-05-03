@@ -916,8 +916,8 @@ input[type=radio], input[type=checkbox], label {
         float: none;
     }
     .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .collapse.in{
         display:block !important;
