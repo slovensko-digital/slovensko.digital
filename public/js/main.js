@@ -53,11 +53,15 @@ $(document).ready(function () {
         if (this.value == 'onetime') {
             $('#contribute-form .payment-periodical').hide();
             $('#contribute-form .payment-onetime').show();
-            $('#contribute-form .payment-onetime input[type=radio]').first().prop('checked', true)
+            $('#contribute-form .form-amount .payment-onetime').css('display', 'inline-block');
+            $('#contribute-form .form-payment .payment-onetime input[type=radio]:visible').first().prop('checked', true);
+            $('#contribute-form .form-amount .payment-onetime input[type=radio]:visible:eq(1)').first().prop('checked', true);
         } else {
             $('#contribute-form .payment-onetime').hide();
             $('#contribute-form .payment-periodical').show();
-            $('#contribute-form .payment-periodical input[type=radio]').first().prop('checked', true)
+            $('#contribute-form .form-amount .payment-periodical').css('display', 'inline-block');
+            $('#contribute-form .form-payment .payment-periodical input[type=radio]:visible').first().prop('checked', true);
+            $('#contribute-form .form-amount .payment-periodical input[type=radio]:visible:eq(1)').first().prop('checked', true);
         }
     });
 

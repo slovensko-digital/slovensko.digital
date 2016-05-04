@@ -550,9 +550,15 @@ span.icon-circle {
 #contribute-form .payment .form-group label {
     font-weight: 100;
 }
-#contribute-form .payment-onetime {
+
+#contribute-form .form-amount .payment-onetime {
     display: none;
 }
+
+#contribute-form .form-amount .payment-periodical {
+    display: inline-block;
+}
+
 #contribute-form input[name=price_other] {
     width: 5em;
     height: inherit;

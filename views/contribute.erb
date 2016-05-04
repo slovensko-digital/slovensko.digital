@@ -36,19 +36,28 @@
           </div>
 
           <label class="form-headline">Vyberte si sumu, akou nás chcete podporovať</label>
-          <div class="form-inline">
-            <div class="form-group inline form-group-box">
+          <div class="form-inline form-amount">
+            <div class="form-group inline form-group-box payment-periodical">
               <input type="radio" id="contribute-amount-8" name="amount" value="8">
-              <label for="contribute-amount-8">8€</label>
+              <label for="contribute-amount-8">8&euro;</label>
             </div>
-            <div class="form-group inline form-group-box">
+            <div class="form-group inline form-group-box payment-periodical">
               <input type="radio" id="contribute-amount-16" name="amount" value="16" checked>
-              <label for="contribute-amount-16">16€</label>
+              <label for="contribute-amount-16">16&euro;</label>
             </div>
-            <div class="form-group inline form-group-box">
+            <div class="form-group inline form-group-box payment-periodical payment-onetime">
               <input type="radio" id="contribute-amount-32" name="amount" value="32">
-              <label for="contribute-amount-32">32€</label>
+              <label for="contribute-amount-32">32&euro;</label>
             </div>
+            <div class="form-group inline form-group-box payment-onetime">
+              <input type="radio" id="contribute-amount-64" name="amount" value="64">
+              <label for="contribute-amount-64">64&euro;</label>
+            </div>
+            <div class="form-group inline form-group-box payment-onetime">
+              <input type="radio" id="contribute-amount-128" name="amount" value="128">
+              <label for="contribute-amount-128">128&euro;</label>
+            </div>
+
             <div class="form-group inline form-group-box">
               <input type="radio" id="contribute-amount-other" name="amount" value="other">
               <label for="contribute-amount-other">Iná suma
@@ -57,7 +66,7 @@
           </div>
 
           <label class="form-headline">Vyberte spôsob platby</label>
-          <div class="payment">
+          <div class="payment form-payment">
             <div class="form-group payment-periodical">
               <input type="radio" id="payment-method-9" name="payment-method" value="9" checked>
               <label for="payment-method-9">Platba kartou</label>
