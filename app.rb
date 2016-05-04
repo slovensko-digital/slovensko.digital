@@ -6,7 +6,7 @@ require 'newrelic_rpm'
 before do
   # TODO sane defaults
   @page = OpenStruct.new(
-    url: request.url,
+    url: request.url.split('?').first,
     og: OpenStruct.new(
       image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
       secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
