@@ -142,7 +142,7 @@ $(document).ready(function () {
      * Scroll to active accordion tab on mobile
      */
 
-    $('#main-nav-tabs-accordion').on('shown.bs.collapse', function (e) {
+    $('#audience-nav-tabs-accordion').on('shown.bs.collapse', function (e) {
         var offset = $(this).find('.collapse.in').prev('.panel-heading');
         if(offset) {
             $('html,body').animate({
