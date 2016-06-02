@@ -936,3 +936,14 @@ input[type=radio], input[type=checkbox], label {
 {
     vertical-align: baseline !important;
 }
+
+
+/* supporters */
+.content-supporters h3 {
+    margin-top: 1em;
+}
+
+.table-supporters tfoot {
+    font-weight: bold;
+}
+
