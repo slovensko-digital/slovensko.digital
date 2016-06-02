@@ -940,7 +940,7 @@ input[type=radio], input[type=checkbox], label {
 
 /* supporters */
 .content-supporters h3 {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .table-supporters tfoot {
