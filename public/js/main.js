@@ -155,14 +155,12 @@ $(document).ready(function () {
         var elm = $(e);
         $.getJSON('https://api.darujme.sk/v1/feeds/6bdda09c-356b-4328-9953-103eb78aa44d/donors', function (data) {
             var table = '<table class="table table-condensed table-supporters"><tbody>';
-            var sum = 0;
             $.each(data.response.donors, function (i, donor) {
                 table += '<tr><td>' + donor.donor_name + '</td><td class="text-right">' + donor.amount + ' &euro;</td></tr>';
-                sum += donor.amount;
             });
 
             table += '</tbody>';
-            table += '<tfoot><tr><td>Spolu</td><td class="text-right">' + sum + ' &euro; </td></tr></tfoot>'
+            table += '<tfoot><tr><td>Spolu</td><td class="text-right">' + data.response.metadata.total_amount + ' &euro; </td></tr></tfoot>'
             table += '</table>';
             elm.after(table);
         })
