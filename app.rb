@@ -87,27 +87,25 @@ get '/kontakt/?' do
   erb :contact
 end
 
-
-get '/vyzva/?' do
-  @page.og = OpenStruct.new(
-    title: 'Informatizácia na Slovensku má veľký problém.',
-    description: 'Slovensko od roku 2007 minulo na informatizáciu 900 miliónov eur. Úradníkom však stále robíme poštára a veľa sa nezmenilo.',
-    image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/1X/5df787dcf909f2ddc62132853e33f2def7ee15d3.jpg',
-    secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/1X/5df787dcf909f2ddc62132853e33f2def7ee15d3.jpg',
-  )
-
-  erb :'vyzva/index', layout: :'vyzva/layout'
-end
-
-get '/vyzva/style.css' do
-  scss :'vyzva/style'
-end
+# TODO rm since this was probably moved away and now yields 500
+# get '/vyzva/?' do
+#   @page.og = OpenStruct.new(
+#     title: 'Informatizácia na Slovensku má veľký problém.',
+#     description: 'Slovensko od roku 2007 minulo na informatizáciu 900 miliónov eur. Úradníkom však stále robíme poštára a veľa sa nezmenilo.',
+#     image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/1X/5df787dcf909f2ddc62132853e33f2def7ee15d3.jpg',
+#     secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/1X/5df787dcf909f2ddc62132853e33f2def7ee15d3.jpg',
+#   )
+#   erb :'vyzva/index', layout: :'vyzva/layout'
+# end
+#
+# get '/vyzva/style.css' do
+#   scss :'vyzva/style'
+# end
 
 not_found do
   erb :'404'
 end
 
-# legacy
 get '/oz/novinky/?' do
   redirect to('/aktuality')
 end
