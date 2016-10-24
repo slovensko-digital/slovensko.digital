@@ -87,6 +87,21 @@ get '/kontakt/?' do
   erb :contact
 end
 
+get '/narodeniny/?' do
+  @page.title = 'Narodeniny'
+  erb :'birthday/index'
+end
+
+get '/narodeniny/kamarati' do
+  @page.title = 'Aj ja som Slovensko.Digital'
+  erb :'birthday/friends'
+end
+
+get '/narodeniny/prihody' do
+  @page.title = 'Príhody'
+  erb :'birthday/stories'
+end
+
 # TODO rm since this was probably moved away and now yields 500
 # get '/vyzva/?' do
 #   @page.og = OpenStruct.new(
