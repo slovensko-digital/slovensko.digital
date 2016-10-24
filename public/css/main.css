@@ -218,8 +218,13 @@ ol.big li p {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3d14c3', endColorstr='#4a97f6', GradientType=1);
     /* IE6-9 */
 }
+
 .hero strong {
     color: #f15555;
+}
+
+.hero-sm {
+    padding: 61px 0 0 0;
 }
 
 /* ==========================================================================
@@ -652,6 +657,24 @@ footer a {
     }
 }
 
+.carousel {
+    background: #000;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    background: rgba(0,0,0,.4);
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 0 !important;
+}
 
 /* ==========================================================================
    Media queries
