@@ -1,15 +1,16 @@
 <div class="hero"></div>
-<!--/.hero -->
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/sk_SK/sdk.js#xfbml=1&version=v2.6&appId=803244696467624";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/sk_SK/sdk.js#xfbml=1&version=v2.6&appId=803244696467624";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="section main-content">
   <div class="container contribution">
@@ -20,23 +21,20 @@
             <span data-track-event-category="Donation"
                   data-track-event-action="ok"
                   data-track-event-label="<%= h @params['donationtype'] %>"
-                  data-track-event-value="<%= h @params['price'].to_i %>"
-            ></span>
+                  data-track-event-value="<%= h @params['price'].to_i %>"></span>
         <% else %>
             <% if @params.key?('chyba') %>
                 <h3>Zdá sa, že platbu sa nepodarilo zrealizovať. Nevadí.</h3>
                 <span data-track-event-category="Donation"
                       data-track-event-action="error"
                       data-track-event-label="<%= h @params['donationtype'] %>"
-                      data-track-event-value="<%= h @params['price'].to_i %>"
-                ></span>
+                      data-track-event-value="<%= h @params['price'].to_i %>"></span>
             <% else %>
                 <h3>Ďakujeme, že chcete byť súčasťou komunity Slovensko.Digital.</h3>
                 <span data-track-event-category="Donation"
                       data-track-event-action="manual"
                       data-track-event-label="<%= h @params['donationtype'] %>"
-                      data-track-event-value="<%= h @params['price'].to_i %>"
-                ></span>
+                      data-track-event-value="<%= h @params['price'].to_i %>"></span>
             <% end %>
             <% if @params['donationtype'] == 'onetime' %>
                 <p>K uhradeniu daru platobným prevodom použite prosím nasledovné údaje:</p>
@@ -44,11 +42,12 @@
                 <p>Pre nastavenie pravidelného (každomesačného) trvalého príkazu použite prosím nasledovné údaje:</p>
             <% end %>
             <p>
-              <strong>Variabilný symbol: <%= h @params['vs'] %><br>
-                Suma: <%= h @params['price'] %> &euro;<br>
-                Číslo účtu (IBAN): SK05 1100 0000 0029 2383 8046<br>
-                Swift kód: TATRSKBX<br>
-                Správa pre príjimateľa: Slovensko.Digital<br>
+              <strong>
+                Variabilný symbol: <%= h @params['vs'] %><br/>
+                Suma: <%= h @params['price'] %> &euro;<br/>
+                Číslo účtu (IBAN): SK05 1100 0000 0029 2383 8046<br/>
+                Swift kód: TATRSKBX<br/>
+                Správa pre príjimateľa: Slovensko.Digital<br/>
               </strong>
             </p>
         <% end %>
@@ -61,9 +60,9 @@
         <p>Dajte vedieť, o tom, že nás podporujete aj Vašim známim. Nebudete sa mať za čo hanbiť. Sľubujeme.</p>
 
         <p>
-        <div class="fb-share-button" data-href="https://slovensko.digital/podpora" data-layout="button" data-mobile-iframe="true"></div>
-        <span><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://slovensko.digital/podpora" data-text="Aj ja podporujem Slovensko.Digital!">Tweet</a></span>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <div class="fb-share-button" data-href="https://slovensko.digital/podpora" data-layout="button" data-mobile-iframe="true"></div>
+          <span><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://slovensko.digital/podpora" data-text="Aj ja podporujem Slovensko.Digital!">Tweet</a></span>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </p>
 
         <p><strong>Ďakujeme.</strong></p>
