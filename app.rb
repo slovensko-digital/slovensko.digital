@@ -22,7 +22,9 @@ helpers do
 end
 
 get '/' do
-  erb :index
+  # TODO revert
+  #erb :index
+  redirect to('/narodeniny')
 end
 
 get '/o-nas/?' do
