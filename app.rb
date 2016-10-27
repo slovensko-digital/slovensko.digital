@@ -65,8 +65,8 @@ end
 get '/podpora/?' do
   @page.title = 'Zapojte sa'
   @page.og.title = 'Aj ja podporujem boj za lepšie digitálne služby štátu!'
-  @page.og.image = 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/optimized/2X/5/5cafd95c02f8bdab6f801af93c0856e98647ff63_1_690x362.png'
-  @page.og.secure_url = 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/optimized/2X/5/5cafd95c02f8bdab6f801af93c0856e98647ff63_1_690x362.png'
+  @page.og.image = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/a/a98ccf5b5708c40a6bc605bf56f32d0ae24cab6a.png'
+  @page.og.secure_url = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/a/a98ccf5b5708c40a6bc605bf56f32d0ae24cab6a.png'
   @page.og.description = 'Robíme všetko preto, aby bolo štátne IT lepšie.'
   erb :contribute
 end
