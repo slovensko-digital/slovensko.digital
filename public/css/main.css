@@ -276,9 +276,13 @@ ol.big li p {
     font-weight: 600;
     font-size: 1em;
 }
+
 .btn-primary {
-    background-image: none;
     background: #8ece46;
+}
+
+.btn-primary, .btn-info {
+    background-image: none;
     filter: none;
     padding: 10px 15px;
     border: 0;
@@ -289,6 +293,12 @@ ol.big li p {
 .btn-primary:hover, .btn-primary:focus {
     background: #75b729;
 }
+
+.btn-info:hover, .btn-info:focus {
+    background: #3897b7;
+}
+
+
 .icon-circle {
     background: #ffffff;
     border-radius: 999px;
@@ -657,10 +667,6 @@ footer a {
     }
 }
 
-.carousel {
-    background: #000;
-}
-
 .carousel-indicators {
     bottom: 0;
 }
@@ -674,6 +680,12 @@ footer a {
     padding-left: 80px;
     padding-right: 80px;
     margin-bottom: 0 !important;
+}
+
+.carousel-caption-holder {
+    max-width: 60em;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* ==========================================================================

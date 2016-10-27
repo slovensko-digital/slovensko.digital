@@ -91,16 +91,24 @@ end
 
 get '/narodeniny/?' do
   @page.title = 'Narodeniny'
+  @page.og.title = 'Slovensko.Digital oslavuje prvé narodeniny!'
+  @page.og.image = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
+  @page.og.secure_url = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
+  @page.og.description = 'Už rok sa snažíme o to, aby štátne IT bolo lepšie. Veľa sa nám podarilo a veľa nás ešte čaká. Potrebujeme tvoju pomoc.'
   erb :'birthday/index'
 end
 
 get '/narodeniny/kamarati' do
   @page.title = 'Aj ja som Slovensko.Digital'
+  @page.og.image = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
+  @page.og.secure_url = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
   erb :'birthday/friends'
 end
 
 get '/narodeniny/prihody' do
   @page.title = 'Príhody'
+  @page.og.image = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
+  @page.og.secure_url = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
   erb :'birthday/stories'
 end
 
