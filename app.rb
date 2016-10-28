@@ -74,6 +74,7 @@ end
 route :get, :post, '/dakujeme/?' do
   redirect to('/podpora') unless params['price']
   @page.title = 'Ďakujeme'
+  @page.fb_conversion = OpenStruct.new(value: params['price'])
   @params = params
   erb :thanks
 end
