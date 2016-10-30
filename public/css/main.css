@@ -982,3 +982,6 @@ input[type=radio], input[type=checkbox], label {
     font-weight: bold;
 }
 
+.embed-responsive-special {
+    padding-bottom: 50%;
+}
