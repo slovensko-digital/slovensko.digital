@@ -29,6 +29,7 @@ end
 
 
 get '/co-robime/?' do
+  @page.title = 'Čo robíme'
   erb :index
 end
 

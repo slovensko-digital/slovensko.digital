@@ -617,12 +617,12 @@ span.icon-circle {
     font-size: 1em;
 }
 
-footer {
+footer.main-footer {
     color: #ffffff;
     background: #1d1e21;
     padding-bottom: 70px;
 }
-footer a {
+footer.main-footer a {
     color: #ffffff;
 }
 .footer-main-menu {
@@ -810,13 +810,13 @@ footer a {
         margin-top: 10px;
         width: 100%;
     }
-    footer {
+    footer.main-footer {
         text-align: center;
     }
-    footer .pull-right {
+    footer.main-footer .pull-right {
         float: inherit!important;
     }
-    footer .icon-circle {
+        footer.main-footer .icon-circle {
         margin-top: 20px;
     }
 }
