@@ -683,9 +683,13 @@ footer a {
 }
 
 .carousel-caption-holder {
-    max-width: 60em;
+    max-width: 50em;
     margin: 0 auto;
     text-align: center;
+}
+
+.carousel-inner .item img {
+    max-height: 600px;
 }
 
 /* ==========================================================================

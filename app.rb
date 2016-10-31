@@ -27,6 +27,11 @@ get '/' do
   redirect to('/narodeniny')
 end
 
+
+get '/co-robime/?' do
+  erb :index
+end
+
 get '/o-nas/?' do
   @page.title = 'O nás'
   erb :about
