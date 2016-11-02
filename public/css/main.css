@@ -218,8 +218,13 @@ ol.big li p {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3d14c3', endColorstr='#4a97f6', GradientType=1);
     /* IE6-9 */
 }
+
 .hero strong {
     color: #f15555;
+}
+
+.hero-sm {
+    padding: 61px 0 0 0;
 }
 
 /* ==========================================================================
@@ -271,9 +276,13 @@ ol.big li p {
     font-weight: 600;
     font-size: 1em;
 }
+
 .btn-primary {
-    background-image: none;
     background: #8ece46;
+}
+
+.btn-primary, .btn-info {
+    background-image: none;
     filter: none;
     padding: 10px 15px;
     border: 0;
@@ -284,6 +293,12 @@ ol.big li p {
 .btn-primary:hover, .btn-primary:focus {
     background: #75b729;
 }
+
+.btn-info:hover, .btn-info:focus {
+    background: #3897b7;
+}
+
+
 .icon-circle {
     background: #ffffff;
     border-radius: 999px;
@@ -602,12 +617,12 @@ span.icon-circle {
     font-size: 1em;
 }
 
-footer {
+footer.main-footer {
     color: #ffffff;
     background: #1d1e21;
     padding-bottom: 70px;
 }
-footer a {
+footer.main-footer a {
     color: #ffffff;
 }
 .footer-main-menu {
@@ -652,6 +667,30 @@ footer a {
     }
 }
 
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    background: rgba(0,0,0,.4);
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 0 !important;
+}
+
+.carousel-caption-holder {
+    max-width: 50em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-inner .item img {
+    max-height: 600px;
+}
 
 /* ==========================================================================
    Media queries
@@ -771,13 +810,13 @@ footer a {
         margin-top: 10px;
         width: 100%;
     }
-    footer {
+    footer.main-footer {
         text-align: center;
     }
-    footer .pull-right {
+    footer.main-footer .pull-right {
         float: inherit!important;
     }
-    footer .icon-circle {
+        footer.main-footer .icon-circle {
         margin-top: 20px;
     }
 }
@@ -816,6 +855,16 @@ footer a {
     }
     .collapse.in{
         display:block !important;
+    }
+
+    .carousel-caption h3 {
+        line-height: 1.2em;
+        font-size: 16px;
+    }
+
+    .carousel-caption p {
+        line-height: 1.2em;
+        font-size: 11px;
     }
 }
 
@@ -947,3 +996,6 @@ input[type=radio], input[type=checkbox], label {
     font-weight: bold;
 }
 
+.embed-responsive-special {
+    padding-bottom: 50%;
+}

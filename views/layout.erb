@@ -14,15 +14,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <%= erb :meta %>
-  
+
   <meta name="google-site-verification" content="MHjOCmO7mIawcO30Uu4i5U7TMhs-jlMuO8AQSHzQIPs" />
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900,300&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/main.css?v=2">
+  <link rel="stylesheet" href="/css/main.css?v=6">
 
   <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+          document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '658957580832480'); // Insert your pixel ID here.
+      fbq('track', 'PageView');
+
+      <% if @page.fb_conversion %>
+        fbq('track', 'Purchase', {currency: 'EUR', value: <%= @page.fb_conversion.value %>});
+      <% end %>
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=658957580832480&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body class="<%= @body_class || 'single' %>">
@@ -42,6 +62,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
+        <li><a href="/co-robime">Čo robíme</a></li>
         <li class="dropdown">
           <a href="/o-nas" class="dropdown-toggle disabled" data-toggle="dropdown">O nás <b class="caret"></b></a>
           <ul class="dropdown-menu multi-level">
@@ -60,18 +81,19 @@
           </ul>
         </li>
 
+        <!--
         <li class="dropdown">
           <a href="/pre-media" class=" dropdown-toggle disabled" data-toggle="dropdown">Pre médiá <b class="caret"></b></a>
           <ul class="dropdown-menu multi-level">
             <li><a href="/pre-media">Tlačové správy</a></li>
           </ul>
         </li>
+        -->
         <li><a href="/kontakt">Kontakt</a></li>
         <li><a href="/podpora" class="btn btn-primary">Podporte nás</a></li>
         <li class="navbar-last"><a href="https://platforma.slovensko.digital" target="_blank">Platforma <img src="/img/arrow_top.svg" alt="Platforma Slovensko.digital"></a></li>
       </ul>
     </div>
-    <!--/.navbar-collapse -->
   </div>
 </nav>
 
@@ -81,7 +103,7 @@
   <div class="row">
     <div class="col-sm-3">
       <div class="support-us-left bg-green">
-        <h3><a href="/podpora" class="support-us-link" alt="Podporte nás"><span class="icon-circle" ><img src="img/social/icon-support.svg" alt="Podporte nás"></span>Podporte nás</a></h3>
+        <h3><a href="/podpora" class="support-us-link" alt="Podporte nás"><span class="icon-circle" ><img src="/img/social/icon-support.svg" alt="Podporte nás"></span>Podporte nás</a></h3>
       </div>
     </div>
     <div class="col-sm-9">
@@ -108,7 +130,7 @@
   </div>
 </div>
 
-<footer>
+<footer class="main-footer">
   <div class="section">
     <div class="container">
       <div class="row">
@@ -118,7 +140,6 @@
             <li><a href="/eticky-kodex">Etický kódex</a></li>
             <li><a href="/o-nas">Tím</a></li>
           </ul>
-
         </div>
         <div class="col-md-5">
           <%= erb :address %>
@@ -126,13 +147,13 @@
         <div class="col-md-3">
           <ul class="list-inline list-unstyled pull-right">
             <li>
-              <a href="https://www.facebook.com/slovensko.digital/" target="_blank" class="icon-circle"><img src="img/social/icon-facebook.svg" alt="slovensko.digital Facebook"></a>
+              <a href="https://www.facebook.com/slovensko.digital/" target="_blank" class="icon-circle"><img src="/img/social/icon-facebook.svg" alt="slovensko.digital Facebook"></a>
             </li>
             <li>
-              <a href="https://github.com/slovensko-digital" target="_blank" class="icon-circle"><img src="img/social/icon-github.svg" alt="slovensko.digital Github"></a>
+              <a href="https://github.com/slovensko-digital" target="_blank" class="icon-circle"><img src="/img/social/icon-github.svg" alt="slovensko.digital Github"></a>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCbpnKa1XOIpQLYUQ2dz7Sng" target="_blank" class="icon-circle" ><img src="img/social/icon-youtube.svg" alt="slovensko.digital Youtube"></a>
+              <a href="https://www.youtube.com/channel/UCbpnKa1XOIpQLYUQ2dz7Sng" target="_blank" class="icon-circle" ><img src="/img/social/icon-youtube.svg" alt="slovensko.digital Youtube"></a>
             </li>
           </ul>
         </div>
@@ -149,13 +170,13 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <a href="http://www.studioecht.com" class="pull-right studio-echt" target="_blank">Web vytvoril<img src="img/social/icon-echt.svg" class="icon-echt" alt="Studio Echt"></a>
+          <a href="http://www.studioecht.com" class="pull-right studio-echt" target="_blank">Web vytvoril<img src="/img/social/icon-echt.svg" class="icon-echt" alt="Studio Echt"></a>
         </div>
       </div>
     </div>
   </div>
 </footer>
-<!-- /container -->
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
 <script>
   window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')
