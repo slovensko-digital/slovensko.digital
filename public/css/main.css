@@ -198,12 +198,45 @@ ol.big li p {
     background: #ffffff;
 }
 
+.navbar .alert {
+    font-size: 14px;
+    color: #333;
+    background: rgb(241,174,57);
+    border: none;
+    border-radius: 0;
+    padding: 4px 0 6px 0;
+    margin-bottom: 0;
+}
+.navbar .alert .badge {
+    background: #fff;
+    color: #333;
+    padding: 4px 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+.navbar .alert a {
+    background: #333;
+    border-radius: 5px;
+    padding: 4px 10px 5px;
+    margin-left: 10px;
+}
+.navbar .alert a img {
+    height: 1em;
+}
+.navbar .alert .close {
+    color: #333;
+    top: 6px;
+    right: 18px;
+    text-shadow: none;
+    opacity: 1;
+}
+
 /* ==========================================================================
     Hero
     ========================================================================== */
 
 .hero {
-    padding-top: 11em;
+    padding-top: 13em;
     padding-bottom: 3.5em;
     color: #ffffff;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3d14c3+0,234ec9+28,4a97f6+100 */
@@ -224,7 +257,7 @@ ol.big li p {
 }
 
 .hero-sm {
-    padding: 61px 0 0 0;
+    padding: 101px 0 0 0;
 }
 
 /* ==========================================================================
