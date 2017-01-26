@@ -97,15 +97,6 @@ $(document).ready(function () {
     });
 
     /**
-     * Navbar spacing fix
-     */
-
-    $('.navbar .alert').on('closed.bs.alert', function () {
-        $('.hero').css('padding-top', '11em')
-        $('.hero-sm').css('padding-top', '61px')
-    })
-
-    /**
      * Prevent default navbar dropdown behavior on desktop and enable it on mobile
      */
 

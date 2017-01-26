@@ -223,13 +223,6 @@ ol.big li p {
 .navbar .alert a img {
     height: 1em;
 }
-.navbar .alert .close {
-    color: #333;
-    top: 6px;
-    right: 18px;
-    text-shadow: none;
-    opacity: 1;
-}
 
 /* ==========================================================================
     Hero
