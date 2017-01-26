@@ -201,24 +201,40 @@ ol.big li p {
 .navbar .alert {
     font-size: 14px;
     color: #333;
-    background: rgb(241,174,57);
+    background: #f1b039;
     border: none;
     border-radius: 0;
-    padding: 4px 0 6px 0;
+    padding: 0;
     margin-bottom: 0;
 }
+.navbar .alert .container {
+    padding: 0 30px 0 15px;
+    min-height: 40px;
+}
+@media (min-width: 992px) {
+    .navbar .alert .container {
+        background: url('/img/ecosystem-stripe.png') no-repeat right content-box;
+    }
+}
 .navbar .alert .badge {
+    display: inline;
     background: #fff;
     color: #333;
     padding: 4px 10px;
     margin-right: 10px;
     text-transform: uppercase;
+    vertical-align: -4px;
+}
+.navbar .alert .text {
+    margin-top: 6px;
+    margin-right: 10px;
+    vertical-align: -5px;
 }
 .navbar .alert a {
     background: #333;
     border-radius: 5px;
-    padding: 4px 10px 5px;
-    margin-left: 10px;
+    padding: 5px 10px 6px;
+    vertical-align: -4px;
 }
 .navbar .alert a img {
     height: 1em;

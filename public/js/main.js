@@ -70,7 +70,7 @@ $(document).ready(function () {
      * Listen to scroll to change header opacity class
      */
     function checkScroll() {
-        var startY = ($('.navbar').height() - $('#navbar').height()) * 2;
+        var startY = ($('.navbar').height() - $('#navbar').height() - $('.navbar .alert').height()) * 2;
 
         if ($(window).scrollTop() > startY) {
             $('.navbar').addClass("nav-scrolled");
