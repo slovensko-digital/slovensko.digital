@@ -22,9 +22,7 @@ helpers do
 end
 
 get '/' do
-  # TODO revert
-  #erb :index
-  redirect to('/narodeniny')
+  erb :index
 end
 
 get '/co-robime/?' do
