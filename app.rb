@@ -35,6 +35,11 @@ get '/o-nas/?' do
   erb :about
 end
 
+get '/kariera/?' do
+  @page.title = 'Kariéra'
+  erb :career
+end
+
 get '/aktuality/?' do
   @page.title = 'Aktuality'
   erb :news
