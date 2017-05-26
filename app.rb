@@ -35,6 +35,11 @@ get '/o-nas/?' do
   erb :about
 end
 
+get '/vyrocne-spravy/?' do
+  @page.title = 'Výročné správy'
+  erb :annual_reports
+end
+
 get '/kariera/?' do
   @page.title = 'Kariéra'
   erb :career
