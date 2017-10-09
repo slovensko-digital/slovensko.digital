@@ -27,6 +27,11 @@ get '/clenstvo' do
   erb :membership
 end
 
+get '/clenovia' do
+  @page.title = 'Členstvo'
+  erb :members
+end
+
 
 get '/' do
   erb :index
