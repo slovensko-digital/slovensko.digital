@@ -24,7 +24,7 @@ end
 #new section
 get '/clenstvo' do
   @page.title = 'Členstvo'
-  erb :members
+  erb :membership
 end
 
 
