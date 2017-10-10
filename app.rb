@@ -21,7 +21,6 @@ helpers do
   end
 end
 
-#new section
 get '/clenstvo' do
   @page.title = 'Členovia'
   erb :membership
@@ -31,7 +30,6 @@ get '/clenovia' do
   @page.title = 'Členstvo'
   erb :members
 end
-
 
 get '/' do
   erb :index
