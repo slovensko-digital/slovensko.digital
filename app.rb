@@ -22,12 +22,12 @@ helpers do
 end
 
 get '/clenstvo' do
-  @page.title = 'Členovia'
+  @page.title = 'Členstvo'
   erb :membership
 end
 
 get '/clenovia' do
-  @page.title = 'Členstvo'
+  @page.title = 'Členovia'
   erb :members
 end
 
