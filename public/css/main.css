@@ -592,6 +592,10 @@ span.icon-circle {
     bottom: -30px;
     margin-bottom: -10px;
 }
+ul#basic-members {
+    list-style: none;
+    margin-bottom: 80px;
+}
 #contribute-form {
     padding-top: 30px;
 }
