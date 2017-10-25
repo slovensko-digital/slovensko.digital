@@ -23,7 +23,7 @@ end
 
 get '/clenstvo' do
   @page.title = 'Členstvo'
-  @page.og.image = '/img/clenstvo/manifest-og.png'
+  @page.og.image = 'https://slovensko.digital/img/clenstvo/manifest-og.png'
   erb :membership
 end
 
