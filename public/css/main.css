@@ -1045,3 +1045,7 @@ input[type=radio], input[type=checkbox], label {
 .embed-responsive-special {
     padding-bottom: 50%;
 }
+
+#two-percent.panel-group .panel-body {
+    padding: 30px;
+}
