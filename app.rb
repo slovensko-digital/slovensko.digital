@@ -96,7 +96,7 @@ get '/podpora/?' do
 end
 
 get '/dve_percenta_stage/?' do
-  @page.title = 'Ako nám venovať 2% z dane%'
+  @page.title = 'Ako nám venovať 2% z dane'
   erb :two_percent
 end
 
