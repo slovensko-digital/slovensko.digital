@@ -95,7 +95,7 @@ get '/podpora/?' do
   erb :contribute
 end
 
-get '/dve_percenta_stage/?' do
+get '/dve_percenta/?' do
   @page.title = '2% z dane'
   erb :two_percent
 end
