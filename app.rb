@@ -95,9 +95,14 @@ get '/podpora/?' do
   erb :contribute
 end
 
+get '/dve_percenta_info/?' do
+  @page.title = '2% z dane – informácie'
+  erb :two_percent_info
+end
+
 get '/dve_percenta/?' do
   @page.title = '2% z dane'
-  erb :two_percent
+  erb :two_percent_landing
 end
 
 route :get, :post, '/dakujeme/?' do
