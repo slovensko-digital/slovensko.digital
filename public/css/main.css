@@ -1049,3 +1049,30 @@ input[type=radio], input[type=checkbox], label {
 #two-percent.panel-group .panel-body {
     padding: 30px;
 }
+
+#two-percent-landing .hero h2 {
+    font-weight: normal;
+    margin-top: 6ex;
+}
+
+#two-percent-landing #heads {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+#two-percent-landing #cta-top {
+    font-size: 1.4em;
+    margin-top: 1.4em;
+}
+
+#two-percent-landing .success-item {
+    margin-bottom: 4rem;
+}
+
+#two-percent-landing .success-item p {
+    font-size: 1.2em;
+}
+
+#two-percent-landing .success-item .icon {
+    width: 6em;
+}
