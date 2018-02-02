@@ -104,7 +104,7 @@ get '/dve_percenta/?' do
   @page.title = '2% z dane'
   @page.og.title = '2% pre lepší e-Government'
   @page.og.description = 'Už viac ako 2 roky bojujeme aj za Vás. Ak sa Vám páči čo robíme, prosíme o Vašu podporu.'
-  @page.og.image = 'https://slovensko.digital/img/two_percent/2percent_header_meta.jpg'
+  @page.og.image = 'https://slovensko.digital/img/two_percent/2percent_header_meta.png'
   erb :two_percent_landing
 end
 
