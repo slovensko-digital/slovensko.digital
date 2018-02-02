@@ -1055,6 +1055,10 @@ input[type=radio], input[type=checkbox], label {
     margin-top: 6ex;
 }
 
+#two-percent-landing .hero img {
+    padding: 3rem 2rem;
+}
+
 #two-percent-landing #heads {
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -1075,4 +1079,5 @@ input[type=radio], input[type=checkbox], label {
 
 #two-percent-landing .success-item .icon {
     width: 6em;
+    padding-bottom: 1em;
 }
