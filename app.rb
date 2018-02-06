@@ -33,6 +33,7 @@ get '/clenovia' do
 end
 
 get '/' do
+  redirect to('/dve_percenta')
   erb :index
 end
 
