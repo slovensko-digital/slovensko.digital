@@ -595,6 +595,7 @@ span.icon-circle {
 ul#basic-members {
     list-style: none;
     margin-bottom: 80px;
+    padding: 0;
 }
 #contribute-form {
     padding-top: 30px;
@@ -1138,6 +1139,26 @@ input[type=radio], input[type=checkbox], label {
     padding-top: 3rem !important;
 }
 
+.pb-0 {
+    padding-bottom: 0rem !important;
+}
+.pb-1 {
+    padding-bottom: .25rem !important;
+}
+.pb-2 {
+    padding-bottom: .5rem !important;
+}
+.pb-3 {
+    padding-bottom: 1rem !important;
+}
+.pb-4 {
+    padding-bottom: 1.5rem !important;
+}
+.pb-5 {
+    padding-bottom: 3rem !important;
+}
+
+
 .px-0 {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
@@ -1163,3 +1184,22 @@ input[type=radio], input[type=checkbox], label {
     padding-right: 3rem !important;
 }
 
+
+.mb-0 {
+    margin-bottom: 0rem !important;
+}
+.mb-1 {
+    margin-bottom: .25rem !important;
+}
+.mb-2 {
+    margin-bottom: .5rem !important;
+}
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
