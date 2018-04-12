@@ -37,8 +37,22 @@ get '/' do
 end
 
 get '/co-robime/?' do
-  @page.title = 'Čo robíme'
-  erb :index
+  redirect to('/projekty/red-flags')
+end
+
+get '/projekty/red-flags' do
+  @page.title = 'Red Flags'
+  erb :'projects/red_flags'
+end
+
+get '/projekty/lepsi-egovernment' do
+  @page.title = 'Lepšie služby e-Governmentu'
+  erb :'projects/better_egovernment'
+end
+
+get '/projekty/ekosystem' do
+  @page.title = 'Ekosystém'
+  erb :'projects/ekosystem'
 end
 
 get '/o-nas/?' do
