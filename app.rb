@@ -37,7 +37,12 @@ get '/' do
 end
 
 get '/co-robime/?' do
-  redirect to('/projekty/red-flags')
+  redirect to('/projekty')
+end
+
+get '/projekty' do
+  @page.title = 'Projekty'
+  erb :'projects/index'
 end
 
 get '/projekty/red-flags' do
