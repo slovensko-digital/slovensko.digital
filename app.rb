@@ -36,8 +36,8 @@ get '/' do
   erb :index
 end
 
-get '/co-robime/?' do
-  redirect to('/projekty')
+get '/co-robime' do
+  erb :index
 end
 
 get '/projekty' do
