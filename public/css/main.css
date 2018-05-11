@@ -208,12 +208,16 @@ ol.big li p {
     margin-bottom: 0;
 }
 .navbar .alert .container {
-    padding: 0 30px 0 15px;
     min-height: 40px;
 }
 @media (min-width: 992px) {
     .navbar .alert .container {
         background: url('/img/ecosystem-stripe.png') no-repeat right content-box;
+    }
+}
+@media (max-width: 767px) {
+    .navbar .alert .container {
+        padding: 10px;
     }
 }
 .navbar .alert .badge {
@@ -230,11 +234,13 @@ ol.big li p {
     margin-right: 10px;
     vertical-align: -5px;
 }
-.navbar .alert a {
+.navbar .alert .link-wrapper {
+    display: inline-block;
     background: #333;
     border-radius: 5px;
-    padding: 5px 10px 6px;
+    padding: 0 5px;
     vertical-align: -4px;
+    color: white;
 }
 .navbar .alert a img {
     height: 1em;
