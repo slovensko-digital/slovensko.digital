@@ -452,7 +452,7 @@ ol.big li p {
 }
 .support-us-left, .support-us-right {
     padding: 25px 35px;
-    height: 140px;
+    height: 200px;
     color: #ffffff;
 }
 .support-us-left {
@@ -485,6 +485,18 @@ ol.big li p {
 .support-us-right h3 {
     margin-bottom: 10px;
     margin-top: 20px;
+}
+
+.support-us-right .legal {
+    font-size: .8em;
+    line-height: 1.4em;
+    padding-left: .1em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.support-us-right .legal a {
+    text-decoration: underline;
 }
 
 span.icon-circle {
@@ -669,6 +681,8 @@ ul#basic-members {
 .form-group-box label, #contribute-form .payment label {
     font-size: 1em;
 }
+
+
 
 footer.main-footer {
     color: #ffffff;
