@@ -90,6 +90,11 @@ get '/pre-media/?' do
   erb :press
 end
 
+get '/ochrana-osobnych-udajov' do
+  @page.title = 'Informácie o spracúvaní osobných údajov'
+  erb :privacy_policy
+end
+
 get '/podporovatelia/?' do
   @page.title = 'Podporovatelia'
   erb :supporters
