@@ -21,6 +21,28 @@
 
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css?v=8">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+      window.addEventListener("load", function () {
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#000000"
+                  },
+                  "button": {
+                      "background": "#3a67e8"
+                  }
+              },
+              "theme": "classic",
+              "content": {
+                  "message": "Tento web používa súbory cookie na poskytovanie služieb a analýzu webu. Používaním tohto webu vyjadrujete svoj súhlas s používaním súborov cookie.",
+                  "dismiss": "OK",
+                  "link": " "
+              }
+          })
+      });
+  </script>
 
   <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
