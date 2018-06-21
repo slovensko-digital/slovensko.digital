@@ -1,0 +1,43 @@
+<div class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Lepšie digitálne služby štátu <strong>nie sú</strong> sci-fi</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">Ako sa môžeš zapojiť</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-4">
+        <p>obrazok</p>
+      </div>
+      <div class="col-md-4">
+        <p>V Slovensko.Digital veríme, že spolu s komunitou vieme dosiahnuť oveľa viac. Nezáleží na tom, či si úradník, programátor, laik či politik. Ak nám chceš pomôcť v našej snahe o lepšie IT, pozri si aktivity do <strong>ktorých sa vieš zapojiť už teraz</strong>.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">Aktivity pre teba</h2>
+      </div>
+    </div>
+    <div class="row">
+      <% @activities.each do |activity| %>
+        <%= erb :'participation/_activity_card', locals: { activity: activity } %>
+      <% end %>
+    </div>
+    <div class="row mt-3 mb-5">
+      <div class="col-xs-12 text-center">
+        <a href="/zapoj-sa/aktivity" class="btn btn-primary" role="button">Zobraziť všetky aktivity</a>
+      </div>
+    </div>
+  </div>
+</div>
+
