@@ -1067,6 +1067,14 @@ input[type=radio], input[type=checkbox], label {
     padding-bottom: 50%;
 }
 
+#activities .btn-group-vertical {
+    width: 100%
+}
+
+.activity-card h3 {
+    font-weight: bold;
+}
+
 #two-percent.panel-group .panel-body {
     padding: 30px;
 }

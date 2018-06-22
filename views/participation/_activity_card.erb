@@ -1,6 +1,7 @@
-<div class="col-sm-6 col-md-4">
-  <div class="thumbnail participation-activity">
+<div class="col-sm-6 col-md-4 activity-card" data-category="<%= activity.category %>">
+  <div class="thumbnail">
     <div class="caption">
+      <div class="text-right"><small><%= activity.category %></small></div>
       <h3><%= activity.title %></h3>
       <p class="perex hidden-xs"><%= activity.perex %></p>
       <div class="text-right">

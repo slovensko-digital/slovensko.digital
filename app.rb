@@ -176,8 +176,16 @@ end
 
 get '/zapoj-sa' do
   @page.title = 'Zapoj sa'
+  #TODO OG
   @activities = YAML.load_file('data/participation_activities.yml').map{ |v| OpenStruct.new(v) }.first(3)
   erb :'participation/index'
+end
+
+get '/zapoj-sa/aktivity' do
+  @page.title = 'Zoznam aktivít'
+  #TODO OG
+  @activities = YAML.load_file('data/participation_activities.yml').map{ |v| OpenStruct.new(v) }
+  erb :'participation/activities'
 end
 
 not_found do
