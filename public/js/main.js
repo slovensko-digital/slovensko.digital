@@ -165,4 +165,23 @@ $(document).ready(function () {
             elm.after(table);
         })
     });
+
+    $('#activities #filter .btn').click(function() {
+        $('#activities #filter .btn').removeClass('active');
+        $(this).addClass('active');
+
+        var category = $(this).data('category');
+
+        var allActivities = $('#activities .activity-card');
+
+        $('#activities #list').fadeOut(150, function() {
+            allActivities.hide();
+            if (category === 'all') {
+                allActivities.show();
+            }
+            $('#activities .activity-card[data-category="' + category + '"]').show();
+
+            $('#activities #list').fadeIn(150);
+        });
+    })
 });
