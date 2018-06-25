@@ -8,4 +8,8 @@ class ParticipationActivity < OpenStruct
   def url
     id.gsub('_','-')
   end
+
+  def related_activities
+    self.class.all.select{ |a| a.category == category}.reject{ |a| a.id == id }.first(3)
+  end
 end
