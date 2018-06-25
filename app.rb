@@ -175,6 +175,10 @@ get '/narodeniny/prihody' do
   erb :'birthday/stories'
 end
 
+get '/vyzva/?' do
+  redirect 'http://vyzva.slovensko.digital/'
+end
+
 get '/zapoj-sa' do
   @page.title = 'Zapoj sa'
   #TODO OG
