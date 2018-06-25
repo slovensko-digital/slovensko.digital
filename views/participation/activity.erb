@@ -31,7 +31,7 @@
       </div>
     </div>
     <div id="list" class="row pt-3 pb-5">
-      <% @related_activities.each do |activity| %>
+      <% @activity.related_activities.each do |activity| %>
         <%= erb :'participation/_activity_card', locals: { activity: activity } %>
       <% end %>
     </div>

@@ -197,7 +197,6 @@ ParticipationActivity.all.each do |activity|
   get "/zapoj-sa/#{activity.url}" do
     @page.title = activity.title
     @activity = activity
-    @related_activities = ParticipationActivity.all.select{ |a| a.category == activity.category}.reject{ |a| a.id == activity.id }.first(3)
     #TODO OG
     erb :"participation/activity" do
       erb :"participation/_#{activity.id}"
