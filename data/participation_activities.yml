@@ -1,29 +1,92 @@
 - id: zacni_programovat
   title: Príď s nápadom a začni programovať
   category: IT expert
-  url: zacni-programovat
   perex: Dobrých príkladov nie je nikdy dosť a aj Ty vieš pomôcť Slovensko.Digital a komunite. Ako?
 
 - id: vyhodnot_statny_projekt
   title: Vyhodnoť štátny IT projekt
   category: IT expert
-  url: vyhodnot-statny-projekt
   perex: Štát dnes pripravuje alebo realizuje IT projekty v celkovej hodnote viac ako 500 miliónov eur ročne. Do hodnotenia sa môžeš zapojiť aj ty.
 
 - id: pracovne_skupiny
   title: Poď do pracovných skupín k štátnemu IT
   category: IT expert
-  url: pracovne-skupiny
   perex: Ako Slovensko.Digital sme súčasťou viacerých pracovných skupín, ktoré nastavujú verejné politiky v oblasti štátneho IT. Dohliadame na dobré riešenia.
 
-- id: diskutuj
+- id: diskutuj_o_planovanych_projektoch
+  title: Príď diskutovať o plánovaných IT projektoch štátu
+  category: IT expert
+  perex: Verejné vypočutie je otvorené verejnosti. Vítaný je každý, kto je schopný svojimi pripomienkami zvýšiť kvalitu štúdií resp. IT projektov.
+
+- id: diskutuj_o_statnom_it
   title: Diskutuj o štátnom IT
   category: IT expert
-  url: diskutuj
-  perex: Už od vzniku Slovensko.Digital zapájame odbornú ale aj laickú verejnosť do diskusie (nielen) o informatizácii verejnej správy prostredníctvom Platformy Slovensko.Digital
+  perex: Už od vzniku Slovensko.Digital zapájame odbornú ale aj laickú verejnosť do diskusie (nielen) o informatizácii verejnej správy prostredníctvom platformy Slovensko.Digital
 
-- id: diskutuj2
-  title: Diskutuj o štátnom IT
-  category: Občania
-  url: diskutuj
-  perex: Už od vzniku Slovensko.Digital zapájame odbornú ale aj laickú verejnosť do diskusie (nielen) o informatizácii verejnej správy prostredníctvom Platformy Slovensko.Digital
+- id: ukaz_ako_sa_to_robi
+  title: Ukáž komunite, ako sa to robí
+  category: IT expert
+  perex: Rád by si komunite predstavil dobrú robotu aby si inšpiroval ostatných? Rozbehol si zaujímavý projekt? Daj nám vedieť.
+
+- id: programator_egov_systemov
+  title: Si programátor e-government systémov? Alebo sa na ne chceš integrovať?
+  category: IT expert
+  perex: Ak si programátor e-government systémov, dávame Ti do pozornosti sekciu platformy, ktorá je zameraná na otázky a odpovede na technické problémy spojené s integráciou na štátne IT projekty.
+
+- id: hecni_tvoju_samospravu
+  title: Hecni Tvoju samosprávu
+  category: Občan
+  perex: Aj ty sa môžeš aktívne pričiniť o to, aby bola Tvoja samospráva viac transparentná a inovatívna. Ako? Prijmi ju zverejňovať otvorené dáta.
+
+- id: jedenkrat_a_dost
+  title: Robíš poštára medzi úradmi aj napriek princípu 1x a dosť?
+  category: Občan
+  perex: Iniciatívu a boj proti byrokracii vítame, ale zaujíma nás ako sa princíp “jedenkrát a dosť” dodržiava v praxi.
+
+- id: uzivatelske_prirucky
+  title: Nevieš si rady so štátnym IT?
+  category: Občan
+  perex: Ak sa neorientuješ v elektronických službách štátnej správy, príručky a manuály k vybraným elektronickým službám štátu si môže dohľadať aj na platforme
+
+- id: napis_navod
+  title: Napíš návod ako vybaviť e-službu
+  category: Občan
+  perex: Ak si už “zdolal/a” vybavovanie žiadostí, či Ťa to ešte len čaká, popíš svoju skúsenosť prostredníctvom zmapovania procesu.
+
+- id: napad_na_zlepsenie
+  title: Máš nápad na zlepšenie?
+  category: Občan
+  perex: Máš nápad ako zlepšiť e-službu štátu pre občana? Popíš svoje nápady na zlepšenia na platforme.
+
+- id: rozbehni_spolupracu_s_it_komunitou
+  title: Chceš rozbehnúť spoluprácu s IT komunitou?
+  category: Rebeli
+  perex: Chceme so štátom spolupracovať, nielen ho kritizovať. Na Slovensku spolupráca prebieha zatiaľ hlavne v rovine pripomienkovania verejných politík, avšak Slovensko.Digital a komunita vie byť nápomocná aj v ďalších veciach.
+
+- id: presadzuj_kvalitne_riesenia
+  title: Presadzuj spolu s nami kvalitné IT riešenia
+  category: Politici
+  perex: Aj ako politik nám vieš pomáhať s presadzovaním kvalitných IT riešení.
+
+- id: stan_sa_clenom
+  title: Pridajte sa k členom Slovensko.Digital
+  category: IT firmy
+  perex: Aj Tvoja firma sa môže stať členom Slovensko.Digital.
+
+- id: vyuzivaj_sluzby_slovensko_digital
+  title: Využívaj služby Slovensko.Digital
+  category: IT firmy
+  perex: V roku 2016 sme spustili ekosystém.slovensko.digital, ktorý uľahčuje komunikáciu so štátom, prácu s dátami a verejnými registrami štátu.
+
+- id: potrebujes_poradit
+  title: Potrebuješ poradiť?
+  category: IT firmy
+  perex: Firmám, kde je úprimný záujem dodávať kvalitnejšie výstupy vieme poskytnúť aj odborné poradenstvo v projektoch
+
+- id: presadzujme_spolocne_riesenia
+  title: Spolupracujme pri presadzovaní spoločných riešení
+  category: Občianske iniciatívy
+  perex: Chceme aby bol hlas verejnosti a občianskych iniciatív počuť a aby boli pre vládu rovnocenným partnerom na diskusiu.
+
+
+
