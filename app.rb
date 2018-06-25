@@ -2,8 +2,7 @@ require 'sinatra'
 require 'sinatra/multi_route'
 require 'sinatra/reloader' if development?
 require 'newrelic_rpm'
-
-PARTICIPATION_ACTIVITIES = YAML.load_file('data/participation_activities.yml').map{ |v| OpenStruct.new(v) }
+require_relative 'data/participation_activity'
 
 before do
   # TODO sane defaults
@@ -179,22 +178,22 @@ end
 get '/zapoj-sa' do
   @page.title = 'Zapoj sa'
   #TODO OG
-  @activities = PARTICIPATION_ACTIVITIES.first(3)
+  @activities = ParticipationActivity.all.first(3)
   erb :'participation/index'
 end
 
 get '/zapoj-sa/aktivity' do
   @page.title = 'Zoznam aktivít'
   #TODO OG
-  @activities = PARTICIPATION_ACTIVITIES
+  @activities = ParticipationActivity.all
   erb :'participation/activities'
 end
 
-PARTICIPATION_ACTIVITIES.each do |activity|
+ParticipationActivity.all.each do |activity|
   get "/zapoj-sa/#{activity.url}" do
     @page.title = activity.title
     @activity = activity
-    @related_activities = PARTICIPATION_ACTIVITIES.select{ |a| a.category == activity.category}.reject{ |a| a.id == activity.id }.first(3)
+    @related_activities = ParticipationActivity.all.select{ |a| a.category == activity.category}.reject{ |a| a.id == activity.id }.first(3)
     #TODO OG
     erb :"participation/activity" do
       erb :"participation/_#{activity.id}"
