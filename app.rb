@@ -198,8 +198,8 @@ ParticipationActivity.all.each do |activity|
     @page.title = activity.title
     @activity = activity
     #TODO OG
-    erb :"participation/activity" do
-      erb :"participation/_#{activity.id}"
+    erb :"participation/activity_layout" do
+      erb :"participation/_#{activity.partial}"
     end
   end
 end
