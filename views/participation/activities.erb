@@ -20,7 +20,7 @@
         <div class="btn-group hidden-xs hidden-sm" role="group">
           <button type="button" class="btn btn-default active" data-category="all">Všetko</button>
           <button type="button" class="btn btn-default" data-category="IT expert">IT experti</button>
-          <button type="button" class="btn btn-default" data-category="Občania">Občania</button>
+          <button type="button" class="btn btn-default" data-category="Občan">Občania</button>
           <button type="button" class="btn btn-default" data-category="Politici">Politici</button>
           <button type="button" class="btn btn-default" data-category="Rebeli">Rebeli</button>
           <button type="button" class="btn btn-default" data-category="IT firmy">IT firmy</button>
@@ -29,14 +29,14 @@
         <div class="btn-group-vertical visible-xs visible-sm" role="group">
           <button type="button" class="btn btn-default active" data-category="all">Všetko</button>
           <button type="button" class="btn btn-default" data-category="IT expert">IT experti</button>
-          <button type="button" class="btn btn-default" data-category="Občania">Občania</button>
+          <button type="button" class="btn btn-default" data-category="Občan">Občania</button>
           <button type="button" class="btn btn-default" data-category="Politici">Politici</button>
           <button type="button" class="btn btn-default" data-category="Rebeli">Rebeli</button>
           <button type="button" class="btn btn-default" data-category="IT firmy">IT firmy</button>
         </div>
       </div>
     </div>
-    <div id="list" class="row pt-3 pb-5">
+    <div id="list" class="row pt-3 pb-5 mb-5">
       <% @activities.each do |activity| %>
         <%= erb :'participation/_activity_card', locals: { activity: activity } %>
       <% end %>
