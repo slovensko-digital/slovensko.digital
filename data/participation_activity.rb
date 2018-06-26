@@ -9,6 +9,10 @@ class ParticipationActivity < OpenStruct
     id.gsub('_','-')
   end
 
+  def partial
+    super || id
+  end
+
   def related_activities
     self.class.all.select{ |a| a.category == category}.reject{ |a| a.id == id }.first(3)
   end

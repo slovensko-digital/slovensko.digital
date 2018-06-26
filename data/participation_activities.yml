@@ -14,7 +14,7 @@
   perex: Ako Slovensko.Digital sme súčasťou viacerých pracovných skupín, ktoré nastavujú verejné politiky v oblasti štátneho IT. Dohliadame na dobré riešenia.
 
 - id: diskutuj_o_planovanych_projektoch
-  title: Príď diskutovať o plánovaných IT projektoch štátu
+  title: Príď diskutovať o plánovaných IT projektoch
   category: IT expert
   perex: Verejné vypočutie je otvorené verejnosti. Vítaný je každý, kto je schopný svojimi pripomienkami zvýšiť kvalitu štúdií resp. IT projektov.
 
@@ -29,7 +29,7 @@
   perex: Rád by si komunite predstavil dobrú robotu aby si inšpiroval ostatných? Rozbehol si zaujímavý projekt? Daj nám vedieť.
 
 - id: programator_egov_systemov
-  title: Si programátor e-government systémov? Alebo sa na ne chceš integrovať?
+  title: Robíš s e-government systémami?
   category: IT expert
   perex: Ak si programátor e-government systémov, dávame Ti do pozornosti sekciu platformy, ktorá je zameraná na otázky a odpovede na technické problémy spojené s integráciou na štátne IT projekty.
 
@@ -37,6 +37,12 @@
   title: Hecni Tvoju samosprávu
   category: Občan
   perex: Aj ty sa môžeš aktívne pričiniť o to, aby bola Tvoja samospráva viac transparentná a inovatívna. Ako? Prijmi ju zverejňovať otvorené dáta.
+
+- id: obcan_diskutuj_o_statnom_it
+  title: Diskutuj o štátnom IT
+  partial: diskutuj_o_statnom_it
+  category: Občan
+  perex: Už od vzniku Slovensko.Digital zapájame odbornú ale aj laickú verejnosť do diskusie (nielen) o informatizácii verejnej správy prostredníctvom platformy Slovensko.Digital
 
 - id: jedenkrat_a_dost
   title: Robíš poštára medzi úradmi aj napriek princípu 1x a dosť?
