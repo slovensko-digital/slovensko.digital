@@ -181,14 +181,20 @@ end
 
 get '/zapoj-sa' do
   @page.title = 'Zapoj sa'
-  #TODO OG
+  @page.og.title = 'Zapoj sa'
+  @page.og.description = 'V Slovensko.Digital veríme, že spolu s komunitou vieme dosiahnuť oveľa viac. Nezáleží na tom, či si úradník, programátor, laik či politik. Ak nám chceš pomôcť v našej snahe o lepšie IT, pozri si aktivity do ktorých sa vieš zapojiť už teraz.'
+  @page.og.image = 'https://slovensko.digital/img/participacia-og.png'
+
   @activities = ParticipationActivity.all.first(3)
   erb :'participation/index'
 end
 
 get '/zapoj-sa/aktivity' do
   @page.title = 'Zoznam aktivít'
-  #TODO OG
+  @page.og.title = 'Zapoj sa: Zoznam aktivít'
+  @page.og.description = 'V Slovensko.Digital veríme, že spolu s komunitou vieme dosiahnuť oveľa viac. Nezáleží na tom, či si úradník, programátor, laik či politik. Ak nám chceš pomôcť v našej snahe o lepšie IT, pozri si aktivity do ktorých sa vieš zapojiť už teraz.'
+  @page.og.image = 'https://slovensko.digital/img/participacia-og.png'
+
   @activities = ParticipationActivity.all
   erb :'participation/activities'
 end
@@ -197,7 +203,11 @@ ParticipationActivity.all.each do |activity|
   get "/zapoj-sa/#{activity.url}" do
     @page.title = activity.title
     @activity = activity
-    #TODO OG
+
+    @page.og.title = activity.title
+    @page.og.description = activity.perex
+    @page.og.image = 'https://slovensko.digital/img/participacia-og.png'
+
     erb :"participation/activity_layout" do
       erb :"participation/_#{activity.partial}"
     end
