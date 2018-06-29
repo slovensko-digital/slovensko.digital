@@ -1,8 +1,8 @@
-<div class="col-sm-6 col-md-4 activity-card" data-category="<%= activity.category %>">
+<div class="col-sm-6 col-md-4 activity-card category-<%= activity.category_id %>" data-category="<%= activity.category %>">
   <div class="thumbnail">
     <div class="caption">
-      <div class="text-right text-muted small"><span class="label label-default hl-red"><%= activity.category %></span></div>
-      <h3><%= activity.title %></h3>
+      <div class="category-label text-left small mt-2"><strong><%= activity.category %></strong></div>
+      <h3 class="mt-2"><%= activity.title %></h3>
       <p class="perex hidden-xs"><small><%= activity.perex %></small></p>
       <div class="text-right">
         <a href="/zapoj-sa/<%= activity.url %>" class="btn btn-default" role="button">Viac informácií</a>
