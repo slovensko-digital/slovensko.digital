@@ -171,17 +171,29 @@ $(document).ready(function () {
         $(this).addClass('active');
 
         var category = $(this).data('category');
+        onParticipationActivitiesCategoryChange(category, 150);
+        history.replaceState({}, null, "#" + category)
+    });
 
+    function onParticipationActivitiesCategoryChange(category, animationDelay) {
         var allActivities = $('#activities .activity-card');
 
-        $('#activities #list').fadeOut(150, function() {
+        $('#activities #list').fadeOut(animationDelay, function() {
             allActivities.hide();
             if (category === 'all') {
                 allActivities.show();
             }
             $('#activities .activity-card[data-category="' + category + '"]').show();
 
-            $('#activities #list').fadeIn(150);
+            $('#activities #list').fadeIn(animationDelay);
         });
-    })
+    }
+
+    if (window.location.hash) {
+        var categoryFromLocation = window.location.hash.substr(1);
+        onParticipationActivitiesCategoryChange(categoryFromLocation, 0);
+
+        $('#activities #filter .btn').removeClass('active');
+        $('#activities #filter .btn[data-category="' + categoryFromLocation + '"]').addClass('active');
+    }
 });
