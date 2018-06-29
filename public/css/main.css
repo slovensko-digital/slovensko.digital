@@ -1134,15 +1134,15 @@ input[type=radio], input[type=checkbox], label {
     color: #2a61d4
 }
 
-#activities #filter .btn.category-rebeli:hover {
+#activities #filter .btn.category-uradnici:hover {
     border-bottom-color: #8ece46;
 }
 
-.activity-card.category-rebeli .thumbnail {
+.activity-card.category-uradnici .thumbnail {
     border-top: 2px solid #8ece46
 }
 
-.activity-card.category-rebeli div.category-label {
+.activity-card.category-uradnici div.category-label {
     color: #8ece46
 }
 
