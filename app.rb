@@ -185,7 +185,11 @@ get '/zapoj-sa' do
   @page.og.description = 'V Slovensko.Digital veríme, že spolu s komunitou vieme dosiahnuť oveľa viac. Nezáleží na tom, či si úradník, programátor, laik či politik. Ak nám chceš pomôcť v našej snahe o lepšie IT, pozri si aktivity do ktorých sa vieš zapojiť už teraz.'
   @page.og.image = 'https://slovensko.digital/img/participacia-og.png'
 
-  @activities = ParticipationActivity.all.first(3)
+  @activities = [
+    ParticipationActivity.all.find{ |a| a.id == 'zacni_programovat' },
+    ParticipationActivity.all.find{ |a| a.id == 'uzivatelske_prirucky' },
+    ParticipationActivity.all.find{ |a| a.id == 'rozbehni_spolupracu_s_it_komunitou' },
+  ]
   erb :'participation/index'
 end
 

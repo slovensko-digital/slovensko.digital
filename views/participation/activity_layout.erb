@@ -17,16 +17,18 @@
         <%= yield %>
       </div>
     </div>
-    <div class="row mt-5">
-      <div class="col-xs-12">
-        <h3 class="text-center">Ďalšie v kategórii <%= @activity.category %></h3>
+    <% if @activity.related_activities.length > 0 %>
+      <div class="row mt-5">
+        <div class="col-xs-12">
+          <h3 class="text-center">Ďalšie v kategórii <%= @activity.category %></h3>
+        </div>
       </div>
-    </div>
-    <div id="list" class="row pt-3 pb-5">
-      <% @activity.related_activities.each do |activity| %>
-        <%= erb :'participation/_activity_card', locals: { activity: activity } %>
-      <% end %>
-    </div>
+      <div id="list" class="row pt-3 pb-5">
+        <% @activity.related_activities.each do |activity| %>
+          <%= erb :'participation/_activity_card', locals: { activity: activity } %>
+        <% end %>
+      </div>
+    <% end %>
     <div class="row mt-3 mb-5">
       <div class="col-xs-12 text-center">
         <a href="/zapoj-sa/aktivity" class="btn btn-primary" role="button">Zobraziť všetky aktivity</a>
