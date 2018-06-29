@@ -3,7 +3,7 @@
 
 <div class="section activity main-content">
   <div class="container">
-    <div class="row">
+    <div class="row content">
       <div class="sidebar col-md-3">
         <p class="mb-5"><a href="/zapoj-sa/aktivity">Späť na zoznam aktivít</a></p>
         <div id="contact-us-box">
@@ -23,7 +23,7 @@
           <h3 class="text-center">Ďalšie v kategórii <%= @activity.category %></h3>
         </div>
       </div>
-      <div id="list" class="row pt-3 pb-5">
+      <div class="row pt-3 pb-5">
         <% @activity.related_activities.each do |activity| %>
           <%= erb :'participation/_activity_card', locals: { activity: activity } %>
         <% end %>
