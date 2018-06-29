@@ -14,7 +14,7 @@ class ParticipationActivity < OpenStruct
     return 'obcania' if category == 'Občan'
     return 'firmy' if category == 'IT firmy'
     return 'politici' if category == 'Politici'
-    return 'rebeli' if category == 'Úradníci'
+    return 'uradnici' if category == 'Úradníci'
     return 'iniciativy' if category == 'Občianske iniciatívy'
 
     raise "Unkown category #{category}"
