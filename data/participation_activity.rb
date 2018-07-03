@@ -5,6 +5,10 @@ class ParticipationActivity < OpenStruct
     ACTIVITIES
   end
 
+  def self.find_by_id(id)
+    all.find{ |activity| activity.id == id }
+  end
+
   def url
     id.gsub('_','-')
   end
