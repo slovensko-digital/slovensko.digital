@@ -186,9 +186,9 @@ get '/zapoj-sa' do
   @page.og.image = 'https://slovensko.digital/img/participacia-og.png'
 
   @activities = [
-    ParticipationActivity.all.find{ |a| a.id == 'zacni_programovat' },
-    ParticipationActivity.all.find{ |a| a.id == 'uzivatelske_prirucky' },
-    ParticipationActivity.all.find{ |a| a.id == 'rozbehni_spolupracu_s_it_komunitou' },
+    ParticipationActivity.find_by_id('zacni_programovat'),
+    ParticipationActivity.find_by_id('uzivatelske_prirucky'),
+    ParticipationActivity.find_by_id('rozbehni_spolupracu_s_it_komunitou')
   ]
   erb :'participation/index'
 end
