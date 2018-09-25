@@ -111,6 +111,11 @@ get '/eticky-kodex/?' do
   erb :codex
 end
 
+get '/dodrziavanie-etickeho-kodexu/?' do
+  @page.title = 'Dodržiavanie Etického kódexu'
+  erb :adhering_to_codex
+end
+
 get '/podpora/?' do
   @page.title = 'Zapojte sa'
   @page.og.title = 'Aj ja podporujem boj za lepšie digitálne služby štátu!'

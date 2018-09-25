@@ -1239,6 +1239,16 @@ input[type=radio], input[type=checkbox], label {
     width: 6em;
     padding-bottom: 1em;
 }
+
+p.tip {
+    border: 1px solid rgba(0,0,0,0.33);
+    border-radius: 3px;
+    padding: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    font-size: 1em;
+}
+
 .p-0 {
     padding: 0rem !important;
 }
