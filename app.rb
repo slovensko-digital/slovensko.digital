@@ -159,10 +159,10 @@ end
 
 get '/narodeniny/?' do
   @page.title = 'Narodeniny'
-  @page.og.title = 'Slovensko.Digital oslavuje prvé narodeniny!'
-  @page.og.image = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
-  @page.og.secure_url = 'https://platforma-slovensko-digital-uploads.s3-eu-central-1.amazonaws.com/original/2X/0/02919efd05a9ffa79cd44871309a427f5050fc48.png'
-  @page.og.description = 'Už rok sa snažíme o to, aby štátne IT bolo lepšie. Veľa sa nám podarilo a veľa nás ešte čaká. Potrebujeme tvoju pomoc.'
+  @page.og.title = 'Slovensko.Digital oslavuje tretie narodeniny!'
+  @page.og.image = 'http://slovensko.digital/img/birthday/og.jpg'
+  @page.og.secure_url = 'https://slovensko.digital/img/birthday/og.jpg'
+  @page.og.description = 'Už tretí rok sa snažíme o to, aby štátne IT bolo lepšie. Veľa sa nám podarilo a veľa nás ešte čaká. Potrebujeme tvoju pomoc.'
   erb :'birthday/index'
 end
 
