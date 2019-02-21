@@ -126,14 +126,17 @@ get '/podpora/?' do
 end
 
 get '/dve_percenta_info/?' do
-  @page.title = '2% z dane – informácie'
-  erb :two_percent_info
+  redirect to('/dve-percenta#ako-poukazat')
 end
 
 get '/dve_percenta/?' do
+  redirect to('/dve-percenta')
+end
+
+get '/dve-percenta' do
   @page.title = '2% z dane'
   @page.og.title = '2% pre lepší e-Government'
-  @page.og.description = 'Už viac ako 2 roky bojujeme aj za Vás. Ak sa Vám páči čo robíme, prosíme o Vašu podporu.'
+  @page.og.description = 'Aj Vaše 2% nám pomôžu bojovať za lepší e-Government'
   @page.og.image = 'https://slovensko.digital/img/two_percent/2percent_header_meta.png'
   erb :two_percent_landing
 end

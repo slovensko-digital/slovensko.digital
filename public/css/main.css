@@ -1210,11 +1210,6 @@ input[type=radio], input[type=checkbox], label {
 
 #two-percent-landing .hero h2 {
     font-weight: normal;
-    margin-top: 6ex;
-}
-
-#two-percent-landing .hero img {
-    padding: 3rem 2rem;
 }
 
 #two-percent-landing #heads {
@@ -1228,16 +1223,18 @@ input[type=radio], input[type=checkbox], label {
 }
 
 #two-percent-landing .success-item {
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 #two-percent-landing .success-item p {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #two-percent-landing .success-item .icon {
-    width: 6em;
-    padding-bottom: 1em;
+    font-size: 1.4em;
+    color: #2a61d4;
+    text-align: right;
+    padding-right: 0;
 }
 
 p.tip {
