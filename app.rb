@@ -61,6 +61,12 @@ get '/projekty/ekosystem' do
   erb :'projects/ekosystem'
 end
 
+
+get '/projekty/lepsie-sluzby' do
+  @page.title = 'LepšieSlužby.sk'
+  erb :'projects/lepsie_sluzby'
+end
+
 get '/o-nas/?' do
   @page.title = 'O nás'
   erb :about
