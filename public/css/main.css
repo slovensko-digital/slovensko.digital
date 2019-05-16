@@ -1053,6 +1053,23 @@ input[type=radio], input[type=checkbox], label {
     vertical-align: baseline !important;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -140px;
+    visibility: hidden;
+}
+
+a.jump-to-top {
+    display: block;
+    margin-top: 3rem;
+    font-size: 85%;
+    text-decoration: none;
+}
+
+a.jump-to-top:hover {
+    text-decoration: underline;
+}
 
 /* supporters */
 .content-supporters h3 {
