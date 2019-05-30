@@ -97,6 +97,11 @@ get '/pre-media/?' do
   erb :press
 end
 
+get '/zverejnene-vyzvy' do
+  @page.title = 'Zverejnené výzvy'
+  erb :appeals
+end
+
 get '/ochrana-osobnych-udajov' do
   @page.title = 'Informácie o spracúvaní osobných údajov'
   erb :privacy_policy
