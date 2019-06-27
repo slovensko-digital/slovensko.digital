@@ -24,9 +24,6 @@
             <div class="col-sm-3"><a href="/podporovatelia/2017">Podporovatelia v roku 2017</a></div>
             <div class="col-sm-3"><a href="/podporovatelia/2016">Podporovatelia v roku 2016</a></div>
           </div>
-
-          <%= erb :"supporters_years/_#{@year}" if @year %>
-
           <div class="row">
             <div class="col-sm-4"><a href="http://websupport.sk"><img class="img-responsive" src="/img/logo/websupport.png" alt="WebSupport"></a></div>
             <div class="col-sm-4"><a href="http://qualityunit.com"><img class="img-responsive" src="/img/logo/quality-unit.png" alt="Quality Unit"></a></div>
@@ -69,6 +66,9 @@
           </div>
         </div>
         <hr>
+
+        <%= erb :"supporters_years/_#{@year}" if @year %>
+
       </div>
     </div>
   </div>
