@@ -152,8 +152,13 @@ $(document).ready(function () {
     });
 
     $('#sukromne-osoby').each(function(i, e) {
+        //get year value from URL
+        var year_from = window.location.pathname.split("/").pop();
+        var year_to = parseInt(year_from) + 1;
+
+        var api_link = 'https://api.darujme.sk/v1/feeds/6bdda09c-356b-4328-9953-103eb78aa44d/donors?per_page=500&before=' + year_to + '-01-01&since=' + year_from + '-01-01';
         var elm = $(e);
-        $.getJSON('https://api.darujme.sk/v1/feeds/6bdda09c-356b-4328-9953-103eb78aa44d/donors?per_page=500', function (data) {
+        $.getJSON(api_link, function (data) {
             var table = '<table class="table table-condensed table-supporters"><tbody>';
             $.each(data.response.donors, function (i, donor) {
                 table += '<tr><td>' + donor.donor_name + '</td><td class="text-right">' + donor.amount + ' &euro;</td></tr>';
