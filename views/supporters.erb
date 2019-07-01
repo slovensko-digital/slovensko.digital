@@ -15,15 +15,16 @@
         </ul>
       </div>
       <div class="content-box col-md-9 content-supporters">
-        <h1 class="content-heading text-center">Podporovatelia</h1>
+        <h1 class="content-heading text-center">Podporovatelia <%= @year %></h1>
+        <ul>
+          <li><a href="/podporovatelia/2018">Podporovatelia 2018</a></li>
+          <li><a href="/podporovatelia/2017">Podporovatelia 2017</a></li>
+          <li><a href="/podporovatelia/2016">Podporovatelia 2016</a></li>
+        </ul>
+        <div id="supporters-year" data-year="<%= @year %>"></div>
+        <hr/>
         <div class="content-wrap logos">
           <p>Slovensko.Digital je komunita. Ďakujeme všetkým, ktorí sa rozhodli nás podporiť.</p>
-          <div class="row">
-            <div class="col-sm-3"><a href="/podporovatelia/2019">Podporovatelia v roku 2019</a></div>
-            <div class="col-sm-3"><a href="/podporovatelia/2018">Podporovatelia v roku 2018</a></div>
-            <div class="col-sm-3"><a href="/podporovatelia/2017">Podporovatelia v roku 2017</a></div>
-            <div class="col-sm-3"><a href="/podporovatelia/2016">Podporovatelia v roku 2016</a></div>
-          </div>
           <div class="row">
             <div class="col-sm-4"><a href="http://websupport.sk"><img class="img-responsive" src="/img/logo/websupport.png" alt="WebSupport"></a></div>
             <div class="col-sm-4"><a href="http://qualityunit.com"><img class="img-responsive" src="/img/logo/quality-unit.png" alt="Quality Unit"></a></div>
@@ -67,8 +68,10 @@
         </div>
         <hr>
 
-        <%= erb :"supporters/_#{@year}" if @year %>
+        <%= erb :"supporters/_#{@year}"%>
 
+        <h3 id="sukromne-osoby">Súkromné osoby</h3>
+        <p>V prípade anonymných alebo pseudonymných darcov overujeme ich identitu dodatočne.</p>
       </div>
     </div>
   </div>

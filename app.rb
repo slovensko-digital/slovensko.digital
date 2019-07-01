@@ -107,8 +107,15 @@ get '/ochrana-osobnych-udajov' do
   erb :privacy_policy
 end
 
+get '/podporovatelia' do
+  @page.title = 'Podporovatelia'
+  @year = '2019'
+  erb :supporters
+end
+
 get '/podporovatelia/?:year?' do
-  @year = params['year'] if ['2016', '2017', '2018', '2019'].include?(params['year'])
+  @year = params['year'] if ['2016', '2017', '2018'].include?(params['year'])
+  redirect('/podporovatelia') unless @year
   @page.title = 'Podporovatelia'
   erb :supporters
 end
