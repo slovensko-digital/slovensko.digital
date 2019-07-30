@@ -67,6 +67,11 @@ get '/projekty/lepsie-sluzby' do
   erb :'projects/lepsie_sluzby'
 end
 
+get '/projekty/aj-ty-si-slovensko-digital' do
+  @page.title = 'Aj Ty si Slovensko.Digital'
+  erb :'projects/aj_ty_si_slovensko'
+end
+
 get '/o-nas/?' do
   @page.title = 'O nás'
   erb :about
