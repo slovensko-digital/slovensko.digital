@@ -7,12 +7,12 @@ require_relative 'data/participation_activity'
 before do
   # TODO sane defaults
   @page = OpenStruct.new(
-    url: request.url.split('?').first,
-    og: OpenStruct.new(
-      image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
-      secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
-      description: 'Chceme, aby boli digitálne služby štátu boli jednoduché a dávali zmysel.'
-    )
+      url: request.url.split('?').first,
+      og: OpenStruct.new(
+          image: 'http://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
+          secure_url: 'https://platforma-slovensko-digital-files.s3-eu-central-1.amazonaws.com/original/2X/8/81f213b2919f9e7d944d5d00c0150b8406503988.png',
+          description: 'Chceme, aby boli digitálne služby štátu boli jednoduché a dávali zmysel.'
+      )
   )
 end
 
@@ -108,11 +108,19 @@ get '/zverejnene-vyzvy' do
 end
 
 get '/ochrana-osobnych-udajov' do
-  @page.title = 'Informácie o spracúvaní osobných údajov'
+  @page.title = 'Informácie o spracúvaní osobných údajov'
   erb :privacy_policy
 end
 
-get '/podporovatelia/?' do
+get '/podporovatelia' do
+  @page.title = 'Podporovatelia'
+  @year = '2019'
+  erb :supporters
+end
+
+get '/podporovatelia/?:year?' do
+  @year = params['year'] if ['2016', '2017', '2018'].include?(params['year'])
+  redirect('/podporovatelia') unless @year
   @page.title = 'Podporovatelia'
   erb :supporters
 end
@@ -210,9 +218,9 @@ get '/zapoj-sa' do
   @page.og.image = 'https://slovensko.digital/img/participacia-og.png'
 
   @activities = [
-    ParticipationActivity.find_by_id('zacni_programovat'),
-    ParticipationActivity.find_by_id('uzivatelske_prirucky'),
-    ParticipationActivity.find_by_id('rozbehni_spolupracu_s_it_komunitou')
+      ParticipationActivity.find_by_id('zacni_programovat'),
+      ParticipationActivity.find_by_id('uzivatelske_prirucky'),
+      ParticipationActivity.find_by_id('rozbehni_spolupracu_s_it_komunitou')
   ]
   erb :'participation/index'
 end
