@@ -15,7 +15,7 @@ GEM
     mustermann (1.0.3)
     newrelic_rpm (5.4.0.347)
     puma (3.12.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-protection (2.0.4)
       rack
     sinatra (2.0.4)
