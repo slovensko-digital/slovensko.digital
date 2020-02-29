@@ -27,7 +27,7 @@
 
         <div class="row" id="heads">
           <div class="col-sm-4 pt-4">
-            <img src="/img/two_percent/heads.png" class="img-responsive center-block" />
+            <img src="/img/two_percent/heads_2.png" class="img-responsive center-block" />
             <br/>
             <p class="lead">
               <em>Tím Slovensko.Digital</em>
@@ -38,15 +38,13 @@
           </div>
         </div>
 
-
-
         <div class="row success-item pt-5">
           <div class="col-sm-1 icon">
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           </div>
           <div class="col-md-10">
             <p class="lead">
-              Systematicky <strong>hodnotíme IT projekty</strong> v hodnote takmer miliardy eur na <a href="https://redflags.slovensko.digital/"><strong>RedFlags.Slovensko.Digital</strong></a>
+              Systematicky <strong>hodnotíme IT projekty</strong> a verejné obstarávania v hodnote takmer miliardy eur na <a href="https://redflags.slovensko.digital/"><strong>RedFlags.Slovensko.Digital</strong></a>
               a tlačíme na to, aby sa tie najproblémovejšie zastavili &ndash; aby sa ďalšie stovky a stovky miliónov eur neminuli zbytočne.
             </p>
           </div>
@@ -63,6 +61,18 @@
             </p>
           </div>
         </div>
+
+        <div class="row success-item">
+          <div class="col-sm-1 icon">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          </div>
+          <div class="col-md-10">
+            <p class="lead">
+              Aj cez našu aplikáciu <strong>Voľby.Digital</strong> požiadalo rekordné množstvo občanov o možnosť voliť poštou zo zahraničia či prostredníctvom hlasovacieho preukazu v rámci územia Slovenska.
+            </p>
+          </div>
+        </div>
+
         <div class="row success-item">
           <div class="col-sm-1 icon">
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -75,6 +85,7 @@
             </p>
           </div>
         </div>
+
         <div class="row success-item">
           <div class="col-sm-1 icon">
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -83,13 +94,14 @@
             <p class="lead">Na novom portáli <a href="https://navody.digital"><strong>Návody.Digital</strong></a> pomôžeme každému zorientovať sa v slovenskej byrokracií, ušetriť čas strávený na Slovensko.sk a pomôžeme s online riešením životných situácií. </p>
           </div>
         </div>
+
         <div class="row success-item">
           <div class="col-sm-1 icon">
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           </div>
           <div class="col-md-10">
             <p class="lead">Spájame všetkých, ktorým záleží na čistejšom štátnom IT. Už
-              <a href="https://slovensko.digital/clenovia"><strong>35 firiem a jednotlivcov</strong></a> je členom Slovensko.Digital. Vytvorili sme tiež
+              <a href="https://slovensko.digital/clenovia"><strong>48 firiem a jednotlivcov</strong></a> je členom Slovensko.Digital. Vytvorili sme tiež
               <strong>najväčšiu komunitu</strong> IT odborníkov na Slovensku na
               <a href="https://platforma.slovensko.digital">platforma.slovensko.digital</a>. </p>
           </div>
@@ -147,17 +159,17 @@
               <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                   <p>
-                    Svoje 2 % môžete venovať len vtedy, ak bola vaša daň za celý rok 2018 vyššia ako 150 € (podiel Vašich 2 % teda musí byť minimálne 3 €). Zamestnávateľ vám túto sumu určite rád prezradí.
+                    Svoje 2 % môžete venovať len vtedy, ak bola vaša daň za celý rok <%= (Date.today.year - 1).to_s %> vyššia ako 150 € (podiel Vašich 2 % teda musí byť minimálne 3 €). Zamestnávateľ vám túto sumu určite rád prezradí.
                   </p>
                   <ol>
-                    <li>Najprv vám zamestnávateľ musí pripraviť ročné zúčtovanie zaplatených preddavkov na daň. Požiadajte ho oň najlepšie do 15. 2. 2019.</li>
+                    <li>Najprv vám zamestnávateľ musí pripraviť ročné zúčtovanie zaplatených preddavkov na daň. Požiadajte ho oň najlepšie do 15. 2. <%= Date.today.year.to_s %>.</li>
                     <li>Požiadajte zamestnávateľa o vyplnenie <a href="http://rozhodni.sk/wp-content/uploads/2019/01/Potvrdenie-o-zaplateni-dane-z-prijmov-zo-zavislej-cinnosti_01-2019.pdf">potvrdenia o zaplatení dane</a>.</li>
                     <li>Potom vyplňte toto <a href="https://drive.google.com/file/d/1P9mQ91NS0Pren50eSzJKQDFyQTmkFiRq/view">Vyhlásenie o poukázaní 2 %</a>.</li>
-                    <li>Najneskôr do 30. apríla 2019 doručte obidve tlačivá (z bodu 2. a 3.) daňovému úradu. V prípade poslania tlačív poštou platí dátum z pečiatky na obálke.</li>
+                    <li>Najneskôr do 30. apríla <%= Date.today.year.to_s %> doručte obidve tlačivá (z bodu 2. a 3.) daňovému úradu. V prípade poslania tlačív poštou platí dátum z pečiatky na obálke.</li>
                   </ol>
                   <br />
                   <p>
-                    <strong>Ak ste v roku 2018 odpracovali dobrovoľnícky minimálne 40 hodín, môžete poukázať až 3 % z odvedených daní.</strong> Musíte však od organizácie/prijímateľa dobrovoľníckej činnosti, pre ktorú/ktorého ste v roku 2018 dobrovoľnícky pracovali, získať potvrdenie o odpracovaní minimálne 40 hodín dobrovoľníckej činnosti. Potvrdenie priložte k Potvrdeniu o zaplatení dane a k Vyhláseniu o poukázaní 2 % (3 %). Minimálne 40 hodín nemusíte odpracovať iba v prospech 1 organizácie, či jednotlivca – celkový počet môžete „vyskladať“ aj z práce pre viaceré organizácie.
+                    <strong>Ak ste v roku <%= (Date.today.year - 1).to_s %> odpracovali dobrovoľnícky minimálne 40 hodín, môžete poukázať až 3 % z odvedených daní.</strong> Musíte však od organizácie/prijímateľa dobrovoľníckej činnosti, pre ktorú/ktorého ste v roku <%= (Date.today.year - 1).to_s %> dobrovoľnícky pracovali, získať potvrdenie o odpracovaní minimálne 40 hodín dobrovoľníckej činnosti. Potvrdenie priložte k Potvrdeniu o zaplatení dane a k Vyhláseniu o poukázaní 2 % (3 %). Minimálne 40 hodín nemusíte odpracovať iba v prospech 1 organizácie, či jednotlivca – celkový počet môžete „vyskladať“ aj z práce pre viaceré organizácie.
                   </p>
                 </div>
               </div>
@@ -172,14 +184,14 @@
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                  <p>Svoje 2 % môžete venovať len vtedy, ak bola vaša daň za celý rok 2018 vyššia ako 150 € (podiel Vašich 2 % teda musí byť minimálne 3 €).</p>
+                  <p>Svoje 2 % môžete venovať len vtedy, ak bola vaša daň za celý rok <%= (Date.today.year - 1).to_s %> vyššia ako 150 € (podiel Vašich 2 % teda musí byť minimálne 3 €).</p>
                   <ol>
-                    <li>Stiahnite si tlačivo na <a href="https://pfseform.financnasprava.sk/Formulare/VzoryTlaciv/DPFOAv18.zip">daňové priznanie typu A (príjmy zo zamestnania a dohôd)</a> alebo <a href="https://pfseform.financnasprava.sk/Formulare/VzoryTlaciv/DPFOBv18.zip">tlačivo typu B (živnostníci)</a>. Súčasťou tlačiva je aj oddiel Vyhlásenie o poukázaní 2 %. Pri tlačive typu A je to oddiel VIII. na strane 5, pri tlačive typu B je to oddiel XII. na strane 11. Vyplňte do tohto oddielu <a href="#udaje">údaje Slovensko.Digital</a>.</li>
-                    <li>Do 31. marca 2019 (prípadne do dátumu odloženého daňového priznania) doručte tlačivo <a href="https://www.financnasprava.sk/sk/elektronicke-sluzby/verejne-sluzby/zistenie-miestnej-prislusnost">daňovému úradu</a> a uhraďte daň. V prípade poslania tlačív poštou platí dátum z pečiatky na obálke.</li>
+                    <li>Stiahnite si tlačivo na <a href="http://rozhodni.sk/wp-content/uploads/2019/01/Danove-priznanie-k-dani-z-prijmov-FO-A__2018.pdf">daňové priznanie typu A (príjmy zo zamestnania a dohôd)</a> alebo <a href="http://rozhodni.sk/wp-content/uploads/2020/02/DPFOBv19.pdf">tlačivo typu B (živnostníci)</a>. Súčasťou tlačiva je aj oddiel Vyhlásenie o poukázaní 2 %. Pri tlačive typu A je to oddiel VIII. na strane 5, pri tlačive typu B je to oddiel XII. na strane 11. Vyplňte do tohto oddielu <a href="#udaje">údaje Slovensko.Digital</a>.</li>
+                    <li>Do 31. marca <%= Date.today.year.to_s %> (prípadne do dátumu odloženého daňového priznania) doručte tlačivo <a href="https://www.financnasprava.sk/sk/elektronicke-sluzby/verejne-sluzby/zistenie-miestnej-prislusnost">daňovému úradu</a> a uhraďte daň. V prípade poslania tlačív poštou platí dátum z pečiatky na obálke.</li>
                   </ol>
 
                   <p>
-                    <strong>Ak ste v roku 2018 odpracovali dobrovoľnícky minimálne 40 hodín, môžete poukázať až 3 % z odvedených daní.</strong> Musíte však od organizácie/prijímateľa dobrovoľníckej činnosti, pre ktorú/ktorého ste v roku 2018 dobrovoľnícky pracovali, získať potvrdenie o odpracovaní minimálne 40 hodín dobrovoľníckej činnosti. Potvrdenie priložte k Potvrdeniu o zaplatení dane a k Vyhláseniu o poukázaní 2 % (3 %). Minimálne 40 hodín nemusíte odpracovať iba v prospech 1 organizácie, či jednotlivca – celkový počet môžete „vyskladať“ aj z práce pre viaceré organizácie.</strong>
+                    <strong>Ak ste v roku <%= (Date.today.year - 1).to_s %> odpracovali dobrovoľnícky minimálne 40 hodín, môžete poukázať až 3 % z odvedených daní.</strong> Musíte však od organizácie/prijímateľa dobrovoľníckej činnosti, pre ktorú/ktorého ste v roku <%= (Date.today.year - 1).to_s %> dobrovoľnícky pracovali, získať potvrdenie o odpracovaní minimálne 40 hodín dobrovoľníckej činnosti. Potvrdenie priložte k Potvrdeniu o zaplatení dane a k Vyhláseniu o poukázaní 2 % (3 %). Minimálne 40 hodín nemusíte odpracovať iba v prospech 1 organizácie, či jednotlivca – celkový počet môžete „vyskladať“ aj z práce pre viaceré organizácie.</strong>
                   </p>
                 </div>
               </div>
@@ -194,14 +206,14 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                  <p>Svoje 2 % (prípadne 1 %) z dane môžete venovať, ak bola vaša daň za celý rok 2018 vyššia ako 400 € (800 €). Podiel Vašich 2 % (prípadne 1 %) teda musí byť minimálne 8 €.</p>
+                  <p>Svoje 2 % (prípadne 1 %) z dane môžete venovať, ak bola vaša daň za celý rok <%= (Date.today.year - 1).to_s %> vyššia ako 400 € (800 €). Podiel Vašich 2 % (prípadne 1 %) teda musí byť minimálne 8 €.</p>
                   <ol>
-                    <li>Stiahnite si tlačivo na <a href="https://pfseform.financnasprava.sk/Formulare/VzoryTlaciv/DPPOv18.zip">daňové priznanie pre právnickú osobu</a>. Súčasťou tlačiva je aj VI. časť – Vyhlásenie o poukázaní podielu zaplatenej dane.</li>
+                    <li>Stiahnite si tlačivo na <a href="http://rozhodni.sk/wp-content/uploads/2020/02/DPPOv19.pdf">daňové priznanie pre právnickú osobu</a>. Súčasťou tlačiva je aj VI. časť – Vyhlásenie o poukázaní podielu zaplatenej dane.</li>
                     <ul>
-                      <li>Ak ste v roku 2018 ako právnická osoba až do termínu na podanie daňového priznania v roku 2019 (zvyčajne do 31. 3. 2019) nedarovali financie vo výške minimálne 0,5 % z dane na verejnoprospešný účel (akejkoľvek organizácii), tak môžete poukázať iba 1 % z dane – v daňovom priznaní vyplníte v časti VI. kolónky 1, 2, 4 a 5.</li>
-                      <li>Ak ste v roku 2018 ako právnická osoba až do termínu na podanie daňového priznania v roku 2018 (zvyčajne do 31.3.2019) darovali financie vo výške minimálne 0,5 % z dane na verejnoprospešný účel (akejkoľvek organizácii), tak môžete poukázať 2 % z dane – v daňovom priznaní vyplníte v časti VI. kolónky 1, 2, 3 a 5.</li>
+                      <li>Ak ste v roku <%= (Date.today.year - 1).to_s %> ako právnická osoba až do termínu na podanie daňového priznania v roku <%= Date.today.year.to_s %> (zvyčajne do 31. 3. <%= Date.today.year.to_s %>) nedarovali financie vo výške minimálne 0,5 % z dane na verejnoprospešný účel (akejkoľvek organizácii), tak môžete poukázať iba 1 % z dane – v daňovom priznaní vyplníte v časti VI. kolónky 1, 2, 4 a 5.</li>
+                      <li>Ak ste v roku <%= (Date.today.year - 1).to_s %> ako právnická osoba až do termínu na podanie daňového priznania v roku <%= (Date.today.year - 1).to_s %> (zvyčajne do 31. 3. <%= Date.today.year.to_s %>) darovali financie vo výške minimálne 0,5 % z dane na verejnoprospešný účel (akejkoľvek organizácii), tak môžete poukázať 2 % z dane – v daňovom priznaní vyplníte v časti VI. kolónky 1, 2, 3 a 5.</li>
                     </ul>
-                    <li>Do 31. marca 2019 (prípadne do dátumu odloženého daňového priznania) doručte tlačivo <a href="https://www.financnasprava.sk/sk/elektronicke-sluzby/verejne-sluzby/zistenie-miestnej-prislusnost">daňovému úradu</a> a uhraďte daň.</li>
+                    <li>Do 31. marca <%= Date.today.year.to_s %> (prípadne do dátumu odloženého daňového priznania) doručte tlačivo <a href="https://www.financnasprava.sk/sk/elektronicke-sluzby/verejne-sluzby/zistenie-miestnej-prislusnost">daňovému úradu</a> a uhraďte daň.</li>
                   </ol>
                   <p>Ako právnická osoba môžete poukázať 1 % (2 %) aj viacerým prijímateľom. Platí však, že minimálna výška v prospech jedného prijímateľa je 8 €.</p>
                 </div>
