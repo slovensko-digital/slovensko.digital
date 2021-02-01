@@ -154,17 +154,36 @@ $(document).ready(function () {
     $('#sukromne-osoby').each(function(i, e) {
         var elm = $(e);
         $.getJSON('https://api.darujme.sk/v1/feeds/6bdda09c-356b-4328-9953-103eb78aa44d/donors?per_page=500', function (data) {
-            var table = '<table class="table table-condensed table-supporters"><tbody>';
-            $.each(data.response.donors, function (i, donor) {
-                table += '<tr><td>' + donor.donor_name + '</td><td class="text-right">' + donor.amount + ' &euro;</td></tr>';
-            });
-
-            table += '</tbody>';
-            table += '<tfoot><tr><td>Spolu</td><td class="text-right">' + data.response.metadata.total_amount + ' &euro; </td></tr></tfoot>'
-            table += '</table>';
-            elm.after(table);
+            elm.after(buildDonorTable(data));
         })
     });
+
+    function buildDonorTable(data) {
+        function insertAlignedRow(first, second, target) {
+            var row = target.insertRow();
+            row.insertCell().innerText = first;
+
+            var cell = row.insertCell();
+            cell.classList.add("text-right");
+            cell.innerText = second;
+        }
+
+        var table = document.createElement("table");
+        // IE 11 doesn't support multiple parameters
+        table.classList.add("table");
+        table.classList.add("table-condensed");
+        table.classList.add("table-supporters");
+        var tbody = table.createTBody();
+
+        $.each(data.response.donors, function (i, donor) {
+            insertAlignedRow(donor.donor_name, donor.amount + " \u20AC", tbody);
+        })
+
+        var tfoot = table.createTFoot();
+        insertAlignedRow("Spolu", data.response.metadata.total_amount + " \u20AC", tfoot);
+
+        return table;
+    }
 
     $('#activities #filter .btn').click(function() {
         $('#activities #filter .btn').removeClass('active');
