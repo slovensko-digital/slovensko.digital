@@ -56,6 +56,17 @@
           </div>
           <div class="col-md-10">
             <p class="lead">
+              Vytvorili sme webovú aplikáciu <a href="https://priznanie.digital/"><strong>Priznanie.Digital</strong></a>, ktorá pomáha živnostníkom odbúrať byrokraciu. Stačí <strong>pár klikov</strong> a SZČO, ktorá používa paušálne náklady, má vygenerované svoje <strong>daňové priznanie</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="row success-item">
+          <div class="col-sm-1 icon">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          </div>
+          <div class="col-md-10">
+            <p class="lead">
               Prispeli sme k <strong>zastaveniu nevýhodného projektu</strong> Informačný systém výstavby za 70.000.000 eur. Aj po našej kritike ho minister dopravy
               <strong>zastavil a nechal prepracovať</strong>. Nakoniec rezort dopravy pripravil okresaný projekt s nevyhnutnou funkcionalitou za 3 milióny eur.
             </p>
@@ -79,9 +90,7 @@
           </div>
           <div class="col-md-10">
             <p class="lead">
-              Uľahčujeme život už <strong>takmer 700 podnikateľom</strong> vďaka našej službe <a href="https://ekosystem.slovensko.digital/sluzby/govbox"><strong>GovBox</strong></a>, cez ktorú
-              sa dostanete k štátnej elektronickej pošte pohodlne cez email aj bez elektronického
-              občianskeho, či prihlasovania na Slovensko.sk.
+              Uľahčujeme život už <strong>takmer 700 podnikateľom</strong> vďaka našej službe <a href="https://ekosystem.slovensko.digital/sluzby/govbox"><strong>GovBox</strong></a>, cez ktorú sa dostanete k štátnej elektronickej pošte pohodlne cez email aj bez elektronického OP, či prihlasovania na Slovensko.sk.
             </p>
           </div>
         </div>
@@ -101,7 +110,7 @@
           </div>
           <div class="col-md-10">
             <p class="lead">Spájame všetkých, ktorým záleží na čistejšom štátnom IT. Už
-              <a href="https://slovensko.digital/clenovia"><strong>48 firiem a jednotlivcov</strong></a> je členom Slovensko.Digital. Vytvorili sme tiež
+              <a href="https://slovensko.digital/clenovia"><strong>43 firiem a jednotlivcov</strong></a> je členom Slovensko.Digital. Vytvorili sme tiež
               <strong>najväčšiu komunitu</strong> IT odborníkov na Slovensku na
               <a href="https://platforma.slovensko.digital">platforma.slovensko.digital</a>. </p>
           </div>
@@ -112,7 +121,7 @@
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           </div>
           <div class="col-md-10">
-            <p class="lead">Aj vďaka nám sa štátneho IT otvorilo širšej verejnosti a strážime ho v pracovných skupinách na úradoch. Aby ste Vy nemuseli.</p>
+            <p class="lead">Aj vďaka nám sa štátne IT otvorilo širšej verejnosti a strážime ho v pracovných skupinách na úradoch. Aby ste Vy nemuseli.</p>
           </div>
         </div>
 
@@ -134,6 +143,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9 pt-5">
+          <a id="udaje" class="anchor"></a>
           <h1 class="mb-5">Ako nám poukázať 2% z dane</h1>
           <h3><strong>Údaje pre darovanie 2% pre Slovensko.Digital:</strong></h3>
           <p>
@@ -163,7 +173,7 @@
                   </p>
                   <ol>
                     <li>Najprv vám zamestnávateľ musí pripraviť ročné zúčtovanie zaplatených preddavkov na daň. Požiadajte ho oň najlepšie do 15. 2. <%= Date.today.year.to_s %>.</li>
-                    <li>Požiadajte zamestnávateľa o vyplnenie <a href="http://rozhodni.sk/wp-content/uploads/2019/01/Potvrdenie-o-zaplateni-dane-z-prijmov-zo-zavislej-cinnosti_01-2019.pdf">potvrdenia o zaplatení dane</a>.</li>
+                    <li>Požiadajte zamestnávateľa o vyplnenie <a>potvrdenia o zaplatení dane</a>. (link doplníme čoskoro - Finančná správa ešte nezverejnila nový vzor)</li>
                     <li>Potom vyplňte toto <a href="https://drive.google.com/file/d/1P9mQ91NS0Pren50eSzJKQDFyQTmkFiRq/view">Vyhlásenie o poukázaní 2 %</a>.</li>
                     <li>Najneskôr do 30. apríla <%= Date.today.year.to_s %> doručte obidve tlačivá (z bodu 2. a 3.) daňovému úradu. V prípade poslania tlačív poštou platí dátum z pečiatky na obálke.</li>
                   </ol>
@@ -186,7 +196,7 @@
                 <div class="panel-body">
                   <p>Svoje 2 % môžete venovať len vtedy, ak bola vaša daň za celý rok <%= (Date.today.year - 1).to_s %> vyššia ako 150 € (podiel Vašich 2 % teda musí byť minimálne 3 €).</p>
                   <ol>
-                    <li>Stiahnite si tlačivo na <a href="http://rozhodni.sk/wp-content/uploads/2019/01/Danove-priznanie-k-dani-z-prijmov-FO-A__2018.pdf">daňové priznanie typu A (príjmy zo zamestnania a dohôd)</a> alebo <a href="http://rozhodni.sk/wp-content/uploads/2020/02/DPFOBv19.pdf">tlačivo typu B (živnostníci)</a>. Súčasťou tlačiva je aj oddiel Vyhlásenie o poukázaní 2 %. Pri tlačive typu A je to oddiel VIII. na strane 5, pri tlačive typu B je to oddiel XII. na strane 11. Vyplňte do tohto oddielu <a href="#udaje">údaje Slovensko.Digital</a>.</li>
+                    <li>Stiahnite si tlačivo na <a href="https://pfseform.financnasprava.sk/Formulare/eFormVzor/DP/form.497.html">daňové priznanie typu A (príjmy zo zamestnania a dohôd)</a> alebo <a href="https://pfseform.financnasprava.sk/Formulare/eFormVzor/DP/form.495.html">tlačivo typu B (živnostníci)</a>. Súčasťou tlačiva je aj oddiel Vyhlásenie o poukázaní 2 %. Pri tlačive typu A je to oddiel VIII. na strane 5, pri tlačive typu B je to oddiel XII. na strane 11. Vyplňte do tohto oddielu <a href="#udaje">údaje Slovensko.Digital</a>.</li>
                     <li>Do 31. marca <%= Date.today.year.to_s %> (prípadne do dátumu odloženého daňového priznania) doručte tlačivo <a href="https://www.financnasprava.sk/sk/elektronicke-sluzby/verejne-sluzby/zistenie-miestnej-prislusnost">daňovému úradu</a> a uhraďte daň. V prípade poslania tlačív poštou platí dátum z pečiatky na obálke.</li>
                   </ol>
 
@@ -208,7 +218,7 @@
                 <div class="panel-body">
                   <p>Svoje 2 % (prípadne 1 %) z dane môžete venovať, ak bola vaša daň za celý rok <%= (Date.today.year - 1).to_s %> vyššia ako 400 € (800 €). Podiel Vašich 2 % (prípadne 1 %) teda musí byť minimálne 8 €.</p>
                   <ol>
-                    <li>Stiahnite si tlačivo na <a href="http://rozhodni.sk/wp-content/uploads/2020/02/DPPOv19.pdf">daňové priznanie pre právnickú osobu</a>. Súčasťou tlačiva je aj VI. časť – Vyhlásenie o poukázaní podielu zaplatenej dane.</li>
+                    <li>Stiahnite si tlačivo na <a href="https://pfseform.financnasprava.sk/Formulare/eFormVzor/DP/form.496.html">daňové priznanie pre právnickú osobu</a>. Súčasťou tlačiva je aj VI. časť – Vyhlásenie o poukázaní podielu zaplatenej dane.</li>
                     <ul>
                       <li>Ak ste v roku <%= (Date.today.year - 1).to_s %> ako právnická osoba až do termínu na podanie daňového priznania v roku <%= Date.today.year.to_s %> (zvyčajne do 31. 3. <%= Date.today.year.to_s %>) nedarovali financie vo výške minimálne 0,5 % z dane na verejnoprospešný účel (akejkoľvek organizácii), tak môžete poukázať iba 1 % z dane – v daňovom priznaní vyplníte v časti VI. kolónky 1, 2, 4 a 5.</li>
                       <li>Ak ste v roku <%= (Date.today.year - 1).to_s %> ako právnická osoba až do termínu na podanie daňového priznania v roku <%= (Date.today.year - 1).to_s %> (zvyčajne do 31. 3. <%= Date.today.year.to_s %>) darovali financie vo výške minimálne 0,5 % z dane na verejnoprospešný účel (akejkoľvek organizácii), tak môžete poukázať 2 % z dane – v daňovom priznaní vyplníte v časti VI. kolónky 1, 2, 3 a 5.</li>
