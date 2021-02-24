@@ -1,0 +1,25 @@
+name: Slovensko.Digital CI
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    if: ${{github.ref == 'refs/heads/master'}}
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        upvs_env: [dev, fix, prod]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: dokku/github-action@master
+        with:
+          git_remote_url: ssh://dokku@${{secrets.STAGING_HOST}}/${{matrix.upvs_env}}.${{github.event.repository.name}}
+          ssh_private_key: ${{secrets.STAGING_KEY}}
