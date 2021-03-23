@@ -1255,6 +1255,24 @@ a.jump-to-top:hover {
     padding-right: 0;
 }
 
+#two-percent-landing .videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+#two-percent-landing .videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 p.tip {
     border: 1px solid rgba(0,0,0,0.33);
     border-radius: 3px;
