@@ -51,9 +51,9 @@ get '/projekty/red-flags' do
   erb :'projects/red_flags'
 end
 
-get '/projekty/lepsi-egovernment' do
-  @page.title = 'Lepšie služby e-Governmentu'
-  erb :'projects/better_egovernment'
+get '/projekty/red-flags-5-0-sd-za' do
+  @page.title = 'Red Flags 5.0: SD ZA'
+  erb :'projects/red_flags_5_0_sd_za'
 end
 
 get '/projekty/ekosystem' do
@@ -61,10 +61,14 @@ get '/projekty/ekosystem' do
   erb :'projects/ekosystem'
 end
 
-
 get '/projekty/lepsie-sluzby' do
   @page.title = 'LepšieSlužby.sk'
   erb :'projects/lepsie_sluzby'
+end
+
+get '/projekty/lepsi-egovernment' do
+  @page.title = 'Lepšie služby e-Governmentu'
+  erb :'projects/better_egovernment'
 end
 
 get '/projekty/aj-ty-si-slovensko-digital' do
