@@ -174,6 +174,11 @@ get '/venujte-svoj-cas/?' do
   erb :collaborate
 end
 
+get '/benefit-plus/?' do
+  @page.title = 'Benefit Plus'
+  erb :benefit_plus
+end
+
 get '/kontakt/?' do
   @body_class = 'main'
   @page.title = 'Kontakt'
