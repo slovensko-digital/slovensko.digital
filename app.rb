@@ -56,6 +56,11 @@ get '/projekty/red-flags-5-0-sd-za' do
   erb :'projects/red_flags_5_0_sd_za'
 end
 
+get '/projekty/pomoc-podnikatelom' do
+  @page.title = 'Pomoc podnikateľom'
+  erb :'projects/pomoc_podnikatelom'
+end
+
 get '/projekty/ekosystem' do
   @page.title = 'Ekosystém'
   erb :'projects/ekosystem'
