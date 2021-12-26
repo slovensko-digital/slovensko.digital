@@ -153,12 +153,43 @@ $(document).ready(function () {
 
     $('#sukromne-osoby').each(function(i, e) {
         var elm = $(e);
+        var additionalDonors = [
+            {
+                donor_name: "Peter Komorník",
+                amount: 5000,
+            },
+            {
+                donor_name: "Gabriel Lachmann",
+                amount: 350,
+            },
+            {
+                donor_name: "Róbert Dusík",
+                amount: 350,
+            },
+            {
+                donor_name: "Michal Barla",
+                amount: 128,
+            },
+            {
+                donor_name: "Peter Papp",
+                amount: 100,
+            },
+            {
+                donor_name: "Pavol Lukáč",
+                amount: 100,
+            },
+        ];
+
         $.getJSON('https://api.darujme.sk/v1/feeds/6bdda09c-356b-4328-9953-103eb78aa44d/donors?per_page=500', function (data) {
-            elm.after(buildDonorTable(data));
+
+            var donors = [...data.response.donors, ...additionalDonors].sort((a,b) => b.amount - a.amount);
+            var total_amount = additionalDonors.reduce((total_amount, {amount}) => total_amount + amount, data.response.metadata.total_amount).toFixed(2);
+
+            elm.after(buildDonorTable(donors, total_amount));
         })
     });
 
-    function buildDonorTable(data) {
+    function buildDonorTable(donors, total_amount) {
         function insertAlignedRow(first, second, target) {
             var row = target.insertRow();
             row.insertCell().innerText = first;
@@ -175,12 +206,12 @@ $(document).ready(function () {
         table.classList.add("table-supporters");
         var tbody = table.createTBody();
 
-        $.each(data.response.donors, function (i, donor) {
+        $.each(donors, function (i, donor) {
             insertAlignedRow(donor.donor_name, donor.amount + " \u20AC", tbody);
         })
 
         var tfoot = table.createTFoot();
-        insertAlignedRow("Spolu", data.response.metadata.total_amount + " \u20AC", tfoot);
+        insertAlignedRow("Spolu", total_amount + " \u20AC", tfoot);
 
         return table;
     }
