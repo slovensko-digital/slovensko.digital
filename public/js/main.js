@@ -181,8 +181,17 @@ $(document).ready(function () {
         ];
 
         $.getJSON('https://api.darujme.sk/v1/feeds/6bdda09c-356b-4328-9953-103eb78aa44d/donors?per_page=500', function (data) {
+            var anonymisedUUID = {
+                '334815ad-a7e3-49f0-96e9-49823b494728': 'A. K.'
+            };
 
-            var donors = [...data.response.donors, ...additionalDonors].sort((a,b) => b.amount - a.amount);
+            var donors = [...data.response.donors, ...additionalDonors].map((donor) => {
+                if (donor.uuid && anonymisedUUID[donor.uuid]) {
+                    donor.donor_name = anonymisedUUID[donor.uuid];
+                }
+
+                return donor;
+            }).sort((a,b) => b.amount - a.amount);
             var total_amount = additionalDonors.reduce((total_amount, {amount}) => total_amount + amount, data.response.metadata.total_amount).toFixed(2);
 
             elm.after(buildDonorTable(donors, total_amount));
