@@ -6,5 +6,3 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 gem 'puma'
-
-gem 'newrelic_rpm'

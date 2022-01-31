@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/multi_route'
 require 'sinatra/reloader' if development?
-require 'newrelic_rpm'
 require_relative 'data/participation_activity'
 
 before do
