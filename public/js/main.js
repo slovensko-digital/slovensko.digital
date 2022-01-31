@@ -1,15 +1,4 @@
 $(document).ready(function () {
-    $('[data-track-event-category]').each(function (i, elm) {
-        var e = $(elm);
-        ga('send', 'event',
-            e.data('track-event-category'),
-            e.data('track-event-action'),
-            e.data('track-event-label'),
-            e.data('track-event-value'),
-            {nonInteraction: true}
-        );
-    });
-
     $('#contribute-price-other').focus(function () {
         $('#contribute-amount-other').prop('checked', true);
     });
@@ -29,7 +18,7 @@ $(document).ready(function () {
                     if (data.result != undefined && data.result.result == 'success') {
                         form.remove();
                         $('#newsletter-success').removeClass('hidden');
-                        ga('send', 'event', 'Newsletter', 'subscribe');
+                        plausible('Newsletter subscribed')
                     }
                 },
                 complete: function () {
