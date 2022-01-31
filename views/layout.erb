@@ -15,57 +15,11 @@
 
   <%= erb :meta %>
 
-  <meta name="google-site-verification" content="MHjOCmO7mIawcO30Uu4i5U7TMhs-jlMuO8AQSHzQIPs" />
-  <meta name="facebook-domain-verification" content="y2qirb8ak6mzknal60btypt2c1e75w" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css?v=8">
+  <link rel="stylesheet" href="css/google-fonts-list.css" type="text/css">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900,300&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/main.css?v=8">
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-  <script>
-      window.addEventListener("load", function () {
-          window.cookieconsent.initialise({
-              "palette": {
-                  "popup": {
-                      "background": "#000000"
-                  },
-                  "button": {
-                      "background": "#3a67e8"
-                  }
-              },
-              "theme": "classic",
-              "content": {
-                  "message": "Tento web používa súbory cookie na poskytovanie služieb a analýzu webu. Používaním tohto webu vyjadrujete svoj súhlas s používaním súborov cookie.",
-                  "dismiss": "OK"
-              },
-              "showLink": false
-          })
-      });
-  </script>
-
-  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
-  <!-- Facebook Pixel Code -->
-  <script>
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-          document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '658957580832480'); // Insert your pixel ID here.
-      fbq('track', 'PageView');
-
-      <% if @page.fb_conversion %>
-        fbq('track', 'Purchase', {currency: 'EUR', value: <%= @page.fb_conversion.value %>});
-      <% end %>
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=658957580832480&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- DO NOT MODIFY -->
-  <!-- End Facebook Pixel Code -->
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body class="<%= @body_class || 'single' %>">
@@ -86,7 +40,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><img src="/img/logo/slovenskodigital-logo.svg" alt="Slovensko digital"></a>
+      <a class="navbar-brand" href="/"><img src="img/logo/slovenskodigital-logo.svg" alt="Slovensko digital"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
@@ -113,18 +67,10 @@
           </ul>
         </li>
 
-        <!--
-        <li class="dropdown">
-          <a href="/pre-media" class=" dropdown-toggle disabled" data-toggle="dropdown">Pre médiá <b class="caret"></b></a>
-          <ul class="dropdown-menu multi-level">
-            <li><a href="/pre-media">Tlačové správy</a></li>
-          </ul>
-        </li>
-        -->
         <li><a href="/kontakt">Kontakt</a></li>
         <li><a href="/zapoj-sa"><strong>Zapoj sa</strong></a></li>
         <li><a href="/podpora" class="btn btn-primary">Podporte nás</a></li>
-        <li class="navbar-last"><a href="https://platforma.slovensko.digital" target="_blank">Platforma <img src="/img/arrow_top.svg" alt="Platforma Slovensko.digital"></a></li>
+        <li class="navbar-last"><a href="https://platforma.slovensko.digital" target="_blank">Platforma <img src="img/arrow_top.svg" alt="Platforma Slovensko.digital"></a></li>
       </ul>
     </div>
   </div>
@@ -136,7 +82,7 @@
   <div class="row">
     <div class="col-sm-3">
       <div class="support-us-left bg-green">
-        <h3><a href="/podpora" class="support-us-link" alt="Podporte nás"><span class="icon-circle" ><img src="/img/social/icon-support.svg" alt="Podporte nás"></span>Podporte nás</a></h3>
+        <h3><a href="/podpora" class="support-us-link" alt="Podporte nás"><span class="icon-circle" ><img src="img/social/icon-support.svg" alt="Podporte nás"></span>Podporte nás</a></h3>
       </div>
     </div>
     <div class="col-sm-9">
@@ -185,13 +131,13 @@
         <div class="col-md-3">
           <ul class="list-inline list-unstyled pull-right">
             <li>
-              <a href="https://www.facebook.com/slovensko.digital/" target="_blank" class="icon-circle"><img src="/img/social/icon-facebook.svg" alt="slovensko.digital Facebook"></a>
+              <a href="https://www.facebook.com/slovensko.digital/" target="_blank" class="icon-circle"><img src="img/social/icon-facebook.svg" alt="slovensko.digital Facebook"></a>
             </li>
             <li>
-              <a href="https://github.com/slovensko-digital" target="_blank" class="icon-circle"><img src="/img/social/icon-github.svg" alt="slovensko.digital Github"></a>
+              <a href="https://github.com/slovensko-digital" target="_blank" class="icon-circle"><img src="img/social/icon-github.svg" alt="slovensko.digital Github"></a>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCbpnKa1XOIpQLYUQ2dz7Sng" target="_blank" class="icon-circle" ><img src="/img/social/icon-youtube.svg" alt="slovensko.digital Youtube"></a>
+              <a href="https://www.youtube.com/channel/UCbpnKa1XOIpQLYUQ2dz7Sng" target="_blank" class="icon-circle" ><img src="img/social/icon-youtube.svg" alt="slovensko.digital Youtube"></a>
             </li>
           </ul>
         </div>
@@ -213,37 +159,17 @@
   </div>
 </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+<script src="js/vendor/jquery.js"></script>
 <script>
   window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')
 </script>
 
-<script src="/js/vendor/bootstrap.min.js"></script>
-<script src="/js/vendor/jquery.jsticky.min.js"></script>
-<script src="/js/vendor/svgeezy.min.js"></script>
-<script src="/js/vendor/bootstrap-tabcollapse.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/jquery.jsticky.min.js"></script>
+<script src="js/vendor/svgeezy.min.js"></script>
+<script src="js/vendor/bootstrap-tabcollapse.js"></script>
 
-<script src="/js/main.js?v=4"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-69285708-1', 'auto');
-  ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
-</script>
-<script>!function(i,t){function e(e){return function(){var n=arguments;if("initialize"==e&&n&&n[0].modify&&n[0].modify.overlay&&"loading"==t.readyState){var a="__inf__overlay__";t.write('<div id="'+a+'" style="position:absolute;background:#fff;left:0;top:0;width:100%;height:100%;z-index:1000000"></div>'),setTimeout(function(){var e=t.getElementById(a);e&&t.body.removeChild(e),i.exponea.__=!0},n[0].modify.delay||500)}this._.push([e,arguments])}}if(!i.exponea){var n,a,o="initialize identify update track trackLink trackEnhancedEcommerce getHtml showHtml showBanner showForm ping getAbTest getRecommendation".split(" "),r=t.createElement("script"),d="https:"===t.location.protocol?"https:":"http:";for(i.exponea={_:[]},a=0;a<o.length;a++)n=o[a],i.exponea[n]=e(n);r.type="text/javascript",r.async=!0,r.src=d+"//api.exponea.com/js/exponea.min.js",t.getElementsByTagName("head")[0].appendChild(r)}}(window,document);</script>
-<script type="text/javascript">
-  exponea.initialize({
-    "token": "d460e54c-68b6-11e6-8cef-141877340e97",
-    "track": {
-      "visits": true
-    }
-    //, customer: window.loggedInCustomer // replace window.loggedInCustomer with id of your web site customer, e.g. "john.smith@gmail.com"
-  });
-</script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
