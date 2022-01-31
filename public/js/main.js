@@ -18,7 +18,7 @@ $(document).ready(function () {
                     if (data.result != undefined && data.result.result == 'success') {
                         form.remove();
                         $('#newsletter-success').removeClass('hidden');
-                        plausible('Newsletter subscribed')
+                        plausible('NewsletterSignup')
                     }
                 },
                 complete: function () {
