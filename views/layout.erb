@@ -13,10 +13,36 @@
   <meta name="description" content="Informatizácia na Slovensku má veľký problém.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script defer data-domain="slovensko.digital" src="https://plausible.io/js/plausible.js"></script>
+
   <%= erb :meta %>
 
+  <meta name="google-site-verification" content="MHjOCmO7mIawcO30Uu4i5U7TMhs-jlMuO8AQSHzQIPs" />
+  <meta name="facebook-domain-verification" content="y2qirb8ak6mzknal60btypt2c1e75w" />
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+      window.addEventListener("load", function () {
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#000000"
+                  },
+                  "button": {
+                      "background": "#3a67e8"
+                  }
+              },
+              "theme": "classic",
+              "content": {
+                  "message": "Tento web používa len nevyhnutné súbory cookies.",
+                  "dismiss": "Súhlasím"
+              },
+              "showLink": false
+          })
+      });
+  </script>
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css?v=8">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/google-fonts-list.css" type="text/css">
 
   <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -83,8 +109,19 @@
     <div class="col-sm-3">
       <div class="support-us-left bg-green">
         <h3><a href="/podpora" class="support-us-link" alt="Podporte nás"><span class="icon-circle" ><img src="img/social/icon-support.svg" alt="Podporte nás"></span>Podporte nás</a></h3>
+        <li class="navbar-last"><a href="https://platforma.slovensko.digital" target="_blank">Platforma <img src="/img/arrow_top.svg" alt="Platforma Slovensko.digital"></a></li>
       </div>
     </div>
+
+    <!--
+<li class="dropdown">
+  <a href="/pre-media" class=" dropdown-toggle disabled" data-toggle="dropdown">Pre médiá <b class="caret"></b></a>
+  <ul class="dropdown-menu multi-level">
+    <li><a href="/pre-media">Tlačové správy</a></li>
+  </ul>
+</li>
+-->
+
     <div class="col-sm-9">
       <div class="support-us-right bg-blue">
         <form id="newsletter-form" role="form" action="https://my.sendinblue.com/users/subscribe/js_id/29wti/id/1" data-action="https://my.sendinblue.com/users/subscribeembed/js_id/29wti/id/1" method="post">
