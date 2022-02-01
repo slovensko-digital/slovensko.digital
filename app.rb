@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/multi_route'
 require 'sinatra/reloader' if development?
+require 'yaml'
 require_relative 'data/participation_activity'
 
 before do
