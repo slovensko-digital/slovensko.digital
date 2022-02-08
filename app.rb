@@ -56,6 +56,11 @@ get '/projekty/red-flags-5-0-sd-za' do
   erb :'projects/red_flags_5_0_sd_za'
 end
 
+get '/projekty/spolu-sme-slovensko-digital' do
+  @page.title = 'Spolu sme Slovensko.Digital'
+  erb :'projects/spolu_sme_slovensko_digital'
+end
+
 get '/projekty/pomoc-podnikatelom' do
   @page.title = 'Pomoc podnikateľom'
   erb :'projects/pomoc_podnikatelom'
