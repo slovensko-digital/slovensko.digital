@@ -141,7 +141,7 @@ ol.big li p {
     }
 }
 
-.navbar li img {
+.navbar li img, .support-us-left li img {
     height: 1.5em;
     margin: -0.25em 0;
 }
