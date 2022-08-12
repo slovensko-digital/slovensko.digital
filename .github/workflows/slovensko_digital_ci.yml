@@ -5,14 +5,19 @@ on:
     branches: master
 
 jobs:
-  deploy:
+  gitlab-push:
+    needs: test
+    if: ${{github.ref == 'refs/heads/master'}}
+
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - uses: dokku/github-action@master
         with:
-          git_remote_url: ssh://dokku@${{secrets.SSD_PRODUCTION_HOST}}/${{github.event.repository.name}}
-          ssh_private_key: ${{secrets.SSD_PRODUCTION_KEY}}
+          git_push_flags: '--force'
+          git_remote_url: ssh://git@${{secrets.GITLAB_DEPLOY_HOST}}/web.git
+          ssh_private_key: ${{secrets.GITLAB_DEPLOY_KEY}}
