@@ -1,4 +1,9 @@
 image:
   secrets:
   - name: skdigital-bonet-registry
-
+resources:
+  requests:
+    cpu: 5m
+    memory: 160Mi
+  limits:
+    memory: 300Mi
