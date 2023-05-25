@@ -1273,6 +1273,10 @@ a.jump-to-top:hover {
     height: 100%;
 }
 
+div#participation a {
+    text-decoration: underline;
+}
+
 p.tip {
     border: 1px solid rgba(0,0,0,0.33);
     border-radius: 3px;
